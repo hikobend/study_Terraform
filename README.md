@@ -20,5 +20,5 @@
 |  種類  |  説明  |  URL  |
 |  ----  |  ----  |  ----  |
 |  HCL2  |  HCL2の仕様に関するドキュメント  |  https://www.terraform.io/language  |
-|  CLI  |  Terraformのコマンドに関わるコマンド  |  https://www.terraform.io/cli  |
+|  CLI  |  Terraformのコマンドに関わるドキュメント  |  https://www.terraform.io/cli  |
 |  provider  |  providerに関するドキュメント  |  https://registry.terraform.io/providers/hashicorp/aws/latest/docs  |
