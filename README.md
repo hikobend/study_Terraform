@@ -7,3 +7,6 @@
 3. resourceごとに表を作成する
 
 4. 1〜3を繰り返す
+
+## terraform初期設定
+・terraform initをして初期化
