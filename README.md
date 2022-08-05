@@ -11,7 +11,7 @@
 ## terraform初期設定
 ・Terraform用IAMユーザーを作成
 
-・ターミナルにIAMユーザーを登録
+・ターミナルにIAMユーザーを登録(aws configure)
 
 ・terraform initをして初期化
 
