@@ -23,8 +23,6 @@
 |  CLI  |  Terraformのコマンドに関わるドキュメント  |  https://www.terraform.io/cli  |
 |  provider  |  providerに関するドキュメント  |  https://registry.terraform.io/providers/hashicorp/aws/latest/docs  |
 
-・terraform
-
 バージョン設定コード
 
 ````terraform
@@ -46,3 +44,10 @@ terraform {
 |required_providers|awsの設定|
 |source|hashicorpのものを使用|
 |version|awsのバージョン|
+
+変数設定
+
+variable "enviroment" {
+  type = string
+}
+
