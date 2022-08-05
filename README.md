@@ -22,3 +22,20 @@
 |  HCL2  |  HCL2の仕様に関するドキュメント  |  https://www.terraform.io/language  |
 |  CLI  |  Terraformのコマンドに関わるドキュメント  |  https://www.terraform.io/cli  |
 |  provider  |  providerに関するドキュメント  |  https://registry.terraform.io/providers/hashicorp/aws/latest/docs  |
+
+・terraform
+
+初期コード
+
+````terraform
+terraform {
+  required_version = "1.2.4"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+````
