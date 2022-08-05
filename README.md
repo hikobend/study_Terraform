@@ -25,7 +25,7 @@
 
 ・terraform
 
-初期コード
+バージョン設定コード
 
 ````terraform
 terraform {
@@ -39,3 +39,9 @@ terraform {
   }
 }
 ````
+
+|  コード  |  詳細  |
+|  ----  |  ----  |
+|  required_version|a|
+
+
