@@ -44,5 +44,5 @@ terraform {
 |  ----  |  ----  |
 |required_version|terraformのバージョン|
 |required_providers|awsの設定|
-|source||
-|version||
+|source|hashicorpのものを使用|
+|version|awsのバージョン|
