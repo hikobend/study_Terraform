@@ -47,7 +47,8 @@ terraform {
 
 変数設定
 
+````terraform
 variable "enviroment" {
   type = string
 }
-
+````
