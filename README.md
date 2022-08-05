@@ -9,11 +9,11 @@
 4. 1〜3を繰り返す
 
 ## terraform初期設定
-・terraform initをして初期化
-
 ・Terraform用IAMユーザーを作成
 
 ・ターミナルにIAMユーザーを登録
+
+・terraform initをして初期化
 
 公式ドキュメント
 
