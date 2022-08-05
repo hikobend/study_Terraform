@@ -13,7 +13,7 @@
 
 ・ターミナルにIAMユーザーを登録(aws configure)
 
-・gitignore(https://www.toptal.com/developers/gitignore/api/terraform)
+・.gitignoreファイル作成(https://www.toptal.com/developers/gitignore/api/terraform)
 
 ・terraform initをして初期化
 
