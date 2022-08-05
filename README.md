@@ -25,6 +25,10 @@
 |  CLI  |  Terraformのコマンドに関わるドキュメント  |  https://www.terraform.io/cli  |
 |  provider  |  providerに関するドキュメント  |  https://registry.terraform.io/providers/hashicorp/aws/latest/docs  |
 
+コマンド
+
+次回はここから
+
 バージョン設定コード
 
 ````terraform
