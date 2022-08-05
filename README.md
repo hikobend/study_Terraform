@@ -42,6 +42,7 @@ terraform {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  required_version|a|
-
-
+|required_version|terraformのバージョン|
+|required_providers|awsの設定|
+|source||
+|version||
