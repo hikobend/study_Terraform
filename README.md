@@ -10,3 +10,4 @@
 
 ## terraform初期設定
 ・terraform initをして初期化
+・Terraform用IAMユーザーを作成
