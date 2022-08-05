@@ -13,6 +13,8 @@
 
 ・ターミナルにIAMユーザーを登録(aws configure)
 
+・gitignore
+
 ・terraform initをして初期化
 
 公式ドキュメント
@@ -60,3 +62,4 @@ terraform.tfvars
 ````terraform
 enviroment = "dev"
 ````
+
