@@ -45,10 +45,18 @@ terraform {
 |source|hashicorpのものを使用|
 |version|awsのバージョン|
 
-変数設定
+変数の型を設定
 
 ````terraform
 variable "enviroment" {
   type = string
 }
+````
+
+変数の値を設定
+
+terraform.tfvars
+
+````terraform
+enviroment = "dev"
 ````
