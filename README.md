@@ -97,6 +97,10 @@ terraform {
 }
 ````
 
+保存先を変更するため、
+````terminal
+terraform init
+````
 変数の型を設定
 
 ````terraform
