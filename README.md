@@ -41,6 +41,13 @@
 
 ## バージョン設定コード
 
+|  コード  |  詳細  |
+|  ----  |  ----  |
+|required_version|terraformのバージョン|
+|required_providers|awsの設定|
+|source|hashicorpのものを使用|
+|version|awsのバージョン|
+
 ````terraform
 terraform {
   required_version = "1.2.4"
@@ -53,13 +60,6 @@ terraform {
   }
 }
 ````
-
-|  コード  |  詳細  |
-|  ----  |  ----  |
-|required_version|terraformのバージョン|
-|required_providers|awsの設定|
-|source|hashicorpのものを使用|
-|version|awsのバージョン|
 
 <!-- 
 ## tfstateをS3に移動
