@@ -88,6 +88,8 @@ terraform {
       version = "~> 4.0"
     }
   }
+  
+  # 追加
   backend "s3" {  
   bucket = "custoemr-db-bucket.tfstate"
   key = "customer-db-dev.tfstate"
