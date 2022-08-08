@@ -112,7 +112,7 @@ terraform init
 -->
 
 
-変数の型を設定
+## 変数の型を設定
 ````terraform
 variable "enviroment" {
   type = string
