@@ -17,9 +17,9 @@
 
 ・terraform initをして初期化
 
-[・tfstateをS3に移動](#tfstateをS3に移動)
+・tfstateをS3に移動
 
-公式ドキュメント
+## 公式ドキュメント
 
 |  種類  |  説明  |  URL  |
 |  ----  |  ----  |  ----  |
@@ -27,7 +27,7 @@
 |  CLI  |  Terraformのコマンドに関わるドキュメント  |  https://www.terraform.io/cli  |
 |  provider  |  providerに関するドキュメント  |  https://registry.terraform.io/providers/hashicorp/aws/latest/docs  |
 
-コマンド
+## 基本コマンド
 
 |コマンド|内容|
 |----|----|
@@ -37,7 +37,7 @@
 |terraform apply|変更点を反映(確認あり)|
 |terraform apply-auto-approve|変更点を反映(確認なし)|
 
-バージョン設定コード
+## バージョン設定コード
 
 ````terraform
 terraform {
@@ -51,85 +51,6 @@ terraform {
   }
 }
 ````
-
-````terraform
-terraform {
-  required_version = "1.2.4"
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-}
-````
-
-````terraform
-terraform {
-  required_version = "1.2.4"
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-}
-````
-
-````terraform
-terraform {
-  required_version = "1.2.4"
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-}
-````
-
-````terraform
-terraform {
-  required_version = "1.2.4"
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-}
-````
-````terraform
-terraform {
-  required_version = "1.2.4"
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-}
-````
-
-````terraform
-terraform {
-  required_version = "1.2.4"
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-}
-````
-
-tfstateをS3に移動
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
@@ -137,6 +58,12 @@ tfstateをS3に移動
 |required_providers|awsの設定|
 |source|hashicorpのものを使用|
 |version|awsのバージョン|
+
+## tfstateをS3に移動
+
+### なぜ実装する必要があるのか。
+
+各々で実行するとtfstateの整合性が取れなくなる。管理対象システムとは異なるアカウントに共有S3バケットを作る。
 
 変数の型を設定
 
