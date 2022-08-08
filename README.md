@@ -132,7 +132,7 @@ enviroment = "dev"
 |  コード  |  型  |  詳細  |
 |  ----  |  ----  |  ----  |
 |cidr_block|string|IPv4CIDRブロック|
-||||
+|assign_generated_ipv6_cidr_block|string|IPv6CIdRブロック|
 ||||
 ||||
 ||||
