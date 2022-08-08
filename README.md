@@ -52,6 +52,83 @@ terraform {
 }
 ````
 
+````terraform
+terraform {
+  required_version = "1.2.4"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+````
+
+````terraform
+terraform {
+  required_version = "1.2.4"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+````
+
+````terraform
+terraform {
+  required_version = "1.2.4"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+````
+
+````terraform
+terraform {
+  required_version = "1.2.4"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+````
+````terraform
+terraform {
+  required_version = "1.2.4"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+````
+
+````terraform
+terraform {
+  required_version = "1.2.4"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+````
+
 tfstateをS3に移動
 
 |  コード  |  詳細  |
