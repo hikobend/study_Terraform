@@ -17,6 +17,8 @@
 
 ・terraform initをして初期化
 
+## 必要な設定
+
 ・tfstateをS3に移動
 
 ## 公式ドキュメント
@@ -59,6 +61,7 @@ terraform {
 |source|hashicorpのものを使用|
 |version|awsのバージョン|
 
+<!-- 
 ## tfstateをS3に移動
 
 ### なぜ実装する必要があるのか。
@@ -78,7 +81,6 @@ terraform {
 9. ブロックパブリックアドレスを元に戻す。
 10. tfstateをバケットに入れるようにterraformを修正する。
 
-<!-- 
 
 ````terraform
 terraform {
