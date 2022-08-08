@@ -78,6 +78,8 @@ terraform {
 9. ブロックパブリックアドレスを元に戻す。
 10. tfstateをバケットに入れるようにterraformを修正する。
 
+<!-- 
+
 ````terraform
 terraform {
   required_version = "1.2.4"
@@ -99,12 +101,13 @@ terraform {
 }
 ````
 
+-->
 保存先を変更するため、
 ````terminal
 terraform init
 ````
-変数の型を設定
 
+変数の型を設定
 ````terraform
 variable "enviroment" {
   type = string
