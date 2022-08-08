@@ -131,9 +131,9 @@ enviroment = "dev"
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  ----|  ----  |  ----  |
-|cidr_block|必須|string|IPv4CIDRブロック|
-|assign_generated_ipv6_cidr_block||string|IPv6CIdRブロック|
-|instance_tenancy||enum|テナンシー(default, dedicated)|
-|enable_dns_support||bool|DNS解決|
-|enable_dns_hostnames||bool|DNSホスト名|
-|tags||object|タグ|
+|  cidr_block  |  必須  |  string  |  IPv4CIDRブロック  |
+|  assign_generated_ipv6_cidr_block  ||  string  |  IPv6CIdRブロック  |
+|  instance_tenancy  ||  enum  |  テナンシー(default, dedicated)  |
+|  enable_dns_support  ||  bool  |  DNS解決  |
+|  enable_dns_hostnames  ||  bool  |  DNSホスト名  |
+|  tags  ||  object  |  タグ  |
