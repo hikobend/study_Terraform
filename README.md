@@ -78,6 +78,25 @@ terraform {
 9. ブロックパブリックアドレスを元に戻す。
 10. tfstateをバケットに入れるようにterraformを修正する。
 
+````terraform
+terraform {
+  required_version = "1.2.4"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+  backend "s3" {  
+  bucket = "custoemr-db-bucket.tfstate"
+  key = "customer-db-dev.tfstate"
+  region = "ap-northeast-1"
+  profile = "yamanaka@smasta"
+  }
+}
+````
+
 変数の型を設定
 
 ````terraform
