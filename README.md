@@ -17,7 +17,7 @@
 
 ・terraform initをして初期化
 
-・[tfstateをS3に移動](#tfstateをS3に移動)
+[・tfstateをS3に移動](#tfstateをS3に移動)
 
 公式ドキュメント
 
