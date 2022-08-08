@@ -29,11 +29,11 @@
 
 |コマンド|内容|
 |----|----|
-|terraform init|初期設定|
-|||
-|||
-|||
-
+|terraform init|ワークスペースを初期化|
+|terraform fmt|フォーマットを修正|
+|terraform plan|変更内容を確認|
+|terraform apply|変更点を反映(確認あり)|
+|terraform apply-auto-approve|変更点を反映(確認なし)|
 
 バージョン設定コード
 
