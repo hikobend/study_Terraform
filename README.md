@@ -269,5 +269,6 @@ IGWとルートテーブルを接続
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
-|  vpc_id  |  ●  |  string  |  VPC ID  |
-|  tags  ||  object  |  タグ  |
+|  route_table_id  |  ●  |  string  |  ルートテーブル ID  |
+|  destination_cidr_block  |  ●  |  string  |  送信先  |
+|  gateway_id  |  ●  |  string  |  IGW ID  |
