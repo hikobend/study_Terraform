@@ -219,6 +219,18 @@ resource "aws_subnet" "private-1a" {
 |  vpc_id  |  ●  |  string  |  VPC ID  |
 |  tags  ||  object  |  タグ  |
 
+````terraform
+resource "aws_route_table" "public_rt" {
+  vpc_id = aws_vpc.vpc.id
+
+  tags = {
+    Name = "customer-db-${var.env}-public-rt"
+    Type = "public"
+    Env  = var.env
+  }
+}
+````
+
 ルートテーブルアソシエーション
 
 |  コード  |  必須  |  型  |  詳細  |
@@ -227,3 +239,9 @@ resource "aws_subnet" "private-1a" {
 |  subnet_id  |  ●  |  string  |  サブネット ID  |
 |  tags  ||  object  |  タグ  |
 
+````terraform
+resource "aws_route_table_association" "public_rt_1a" {
+  route_table_id = aws_route_table.public_rt.id
+  subnet_id      = aws_subnet.public_subnet_1a.id
+}
+````
