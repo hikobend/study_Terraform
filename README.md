@@ -255,3 +255,10 @@ resource "aws_route_table_association" "public_rt_1a" {
 ### 作成理由
 
 VPCに接続し、ルートテーブルと関連づけて、インターネットに出られるようにする。
+
+IGW
+
+|  コード  |  必須  |  型  |  詳細  |
+|  ----  |  :--: |  :--:  |  ----  |
+|  vpc_id  |  ●  |  string  |  VPC ID  |
+|  tags  ||  object  |  タグ  |
