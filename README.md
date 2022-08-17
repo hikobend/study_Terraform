@@ -262,3 +262,12 @@ IGW
 |  ----  |  :--: |  :--:  |  ----  |
 |  vpc_id  |  ●  |  string  |  VPC ID  |
 |  tags  ||  object  |  タグ  |
+
+ルート
+
+IGWとルートテーブルを接続
+
+|  コード  |  必須  |  型  |  詳細  |
+|  ----  |  :--: |  :--:  |  ----  |
+|  vpc_id  |  ●  |  string  |  VPC ID  |
+|  tags  ||  object  |  タグ  |
