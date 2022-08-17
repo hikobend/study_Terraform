@@ -249,3 +249,9 @@ resource "aws_route_table_association" "public_rt_1a" {
   subnet_id      = aws_subnet.public_subnet_1a.id
 }
 ````
+
+## インターネットゲートウェイ(以下、IGWと省略)
+
+### 作成理由
+
+VPCに接続し、ルートテーブルと関連づけて、インターネットに出られるようにする。
