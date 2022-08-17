@@ -153,3 +153,12 @@ resource "aws_vpc" "vpc" {
 ````
 
 ## サブネットの作成(土地の中に土地を作成)
+
+
+|  コード  |  必須  |  型  |  詳細  |
+|  ----  |  :--: |  :--:  |  ----  |
+|  vpc_id  |  ●  |  string  |  VPC ID  |
+|  availability_zone  ||  string  |  AZ  |
+|  cidr_block  ||  string  |  CIDRブロック  |
+|  map_public_ip_on_launch  ||  bool  |  自動割り当てIP設定  |
+|  tags  ||  object  |  タグ  |
