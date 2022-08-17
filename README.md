@@ -163,12 +163,13 @@ resource "aws_vpc" "vpc" {
 |  map_public_ip_on_launch  ||  bool  |  自動割り当てIP設定  |
 |  tags  ||  object  |  タグ  |
 
+パブリック
 ````terraform
 resource "aws_subnet" "public-1a" {
   vpc_id                  = aws_vpc.vpc.id
   availability_zone       = "ap-northeast-1a"
   cidr_block              = "10.0.1.0/24"
-  map_public_ip_on_launch = true
+  map_public_ip_on_launch = true #注意
 
   tags = {
     Name = "customer-db-${var.env}-public-1a"
@@ -178,16 +179,17 @@ resource "aws_subnet" "public-1a" {
 }
 ````
 
+プライベート
 ````terraform
-resource "aws_subnet" "public-1c" {
+resource "aws_subnet" "private-1a" {
   vpc_id                  = aws_vpc.vpc.id
-  availability_zone       = "ap-northeast-1c"
-  cidr_block              = "10.0.3.0/24"
-  map_public_ip_on_launch = true
+  availability_zone       = "ap-northeast-1a"
+  cidr_block              = "10.0.2.0/24"
+  map_public_ip_on_launch = false #注意
 
   tags = {
-    Name = "customer-db-${var.env}-public-1c"
-    Type = "public"
+    Name = "customer-db-${var.env}-private-1a"
+    Type = "private"
     Env  = var.env
   }
 }
