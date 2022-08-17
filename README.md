@@ -162,3 +162,33 @@ resource "aws_vpc" "vpc" {
 |  cidr_block  |  ●  |  string  |  CIDRブロック  |
 |  map_public_ip_on_launch  ||  bool  |  自動割り当てIP設定  |
 |  tags  ||  object  |  タグ  |
+
+````terraform
+resource "aws_subnet" "public-1a" {
+  vpc_id                  = aws_vpc.vpc.id
+  availability_zone       = "ap-northeast-1a"
+  cidr_block              = "10.0.1.0/24"
+  map_public_ip_on_launch = true
+
+  tags = {
+    Name = "customer-db-${var.env}-public-1a"
+    Type = "public"
+    Env  = var.env
+  }
+}
+````
+
+````terraform
+resource "aws_subnet" "public-1c" {
+  vpc_id                  = aws_vpc.vpc.id
+  availability_zone       = "ap-northeast-1c"
+  cidr_block              = "10.0.3.0/24"
+  map_public_ip_on_launch = true
+
+  tags = {
+    Name = "customer-db-${var.env}-public-1c"
+    Type = "public"
+    Env  = var.env
+  }
+}
+````
