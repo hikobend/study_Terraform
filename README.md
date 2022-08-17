@@ -194,3 +194,5 @@ resource "aws_subnet" "private-1a" {
   }
 }
 ````
+
+## ルートテーブル
