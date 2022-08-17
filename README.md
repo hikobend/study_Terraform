@@ -130,7 +130,7 @@ enviroment = "dev"
 ## VPCの作成
 
 |  コード  |  必須  |  型  |  詳細  |
-|  :--:  |  :--: |  :--:  |  ----  |
+|  ----  |  :--: |  :--:  |  ----  |
 |  cidr_block  |  ●  |  string  |  IPv4CIDRブロック  |
 |  assign_generated_ipv6_cidr_block  ||  string  |  IPv6CIdRブロック  |
 |  instance_tenancy  ||  enum  |  テナンシー(default, dedicated)  |
