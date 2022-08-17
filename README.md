@@ -218,3 +218,12 @@ VPCとサブネットを紐づける
 |  ----  |  :--: |  :--:  |  ----  |
 |  vpc_id  |  ●  |  string  |  VPC ID  |
 |  tags  ||  object  |  タグ  |
+
+ルートテーブルアソシエーション
+
+|  コード  |  必須  |  型  |  詳細  |
+|  ----  |  :--: |  :--:  |  ----  |
+|  route_table_id  |  ●  |  string  |  ルートテーブル ID  |
+|  subnet_id  |  ●  |  string  |  サブネット ID  |
+|  tags  ||  object  |  タグ  |
+
