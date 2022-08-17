@@ -137,3 +137,17 @@ enviroment = "dev"
 |  enable_dns_support  ||  bool  |  DNS解決  |
 |  enable_dns_hostnames  ||  bool  |  DNSホスト名  |
 |  tags  ||  object  |  タグ  |
+
+````terraform
+resource "aws_vpc" "vpc" {
+  cidr_block                       = "10.0.0.0/20"
+  instance_tenancy                 = "default"
+  enable_dns_support               = true
+  enable_dns_hostnames             = true
+  assign_generated_ipv6_cidr_block = false
+
+  tags = {
+    Name = "customer-db-${var.env}"
+  }
+}
+````
