@@ -154,7 +154,6 @@ resource "aws_vpc" "vpc" {
 
 ## サブネットの作成(土地の中に土地を作成)
 
-
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
 |  vpc_id  |  ●  |  string  |  VPC ID  |
@@ -199,6 +198,11 @@ resource "aws_subnet" "private-1a" {
 
 ### 作成理由
 
-VPCとサブネットを紐づける。
+VPCとサブネットを紐づける
 
+ルートテーブル
 
+|  コード  |  必須  |  型  |  詳細  |
+|  ----  |  :--: |  :--:  |  ----  |
+|  vpc_id  |  ●  |  string  |  VPC ID  |
+|  tags  ||  object  |  タグ  |
