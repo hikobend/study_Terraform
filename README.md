@@ -196,3 +196,7 @@ resource "aws_subnet" "private-1a" {
 ````
 
 ## ルートテーブル
+
+### 作成理由
+
+VPCとサブネットを紐づける
