@@ -159,6 +159,6 @@ resource "aws_vpc" "vpc" {
 |  ----  |  :--: |  :--:  |  ----  |
 |  vpc_id  |  ●  |  string  |  VPC ID  |
 |  availability_zone  ||  string  |  AZ  |
-|  cidr_block  ||  string  |  CIDRブロック  |
+|  cidr_block  |  ●  |  string  |  CIDRブロック  |
 |  map_public_ip_on_launch  ||  bool  |  自動割り当てIP設定  |
 |  tags  ||  object  |  タグ  |
