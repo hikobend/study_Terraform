@@ -274,7 +274,7 @@ resource "aws_internet_gateway" "igw" {
 }
 ````
 
-ルート
+IGWアソシエーション
 
 IGWとルートテーブルを接続
 
@@ -283,3 +283,11 @@ IGWとルートテーブルを接続
 |  route_table_id  |  ●  |  string  |  ルートテーブル ID  |
 |  destination_cidr_block  |  ●  |  string  |  送信先  |
 |  gateway_id  |  ●  |  string  |  IGW ID  |
+
+````terraform
+resource "aws_route" "public_rt_igw_r" {
+  route_table_id         = aws_route_table.public_rt.id
+  destination_cidr_block = "0.0.0.0/0"
+  gateway_id             = aws_internet_gateway.igw.id
+}
+````
