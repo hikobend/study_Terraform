@@ -306,3 +306,13 @@ resource "aws_route" "public_rt_igw_r" {
 |  description  ||  string  |  説明  |
 |  vpc_id  ||  string  |  VPC ID  |
 |  tags  ||  object  |  タグ  |
+
+セキュリティグループルール
+
+|  コード  |  必須  |  型  |  詳細  |
+|  ----  |  :--: |  :--:  |  ----  |
+|  security_group_id  ||  string  |  セキュリティグループID  |
+|  type  ||  enum  |  ingress,egraee  |
+|  protocol  ||  enum  |  tcp,udp,icmp  |
+|  from_port  ||  number  |  開始ポート  |
+|  to_port  ||  number  |  終了ポート  |
