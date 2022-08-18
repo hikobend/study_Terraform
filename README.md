@@ -263,6 +263,17 @@ IGW
 |  vpc_id  |  ●  |  string  |  VPC ID  |
 |  tags  ||  object  |  タグ  |
 
+````terraform
+resource "aws_internet_gateway" "igw" {
+  vpc_id = aws_vpc.vpc.id
+
+  tags = {
+    Name = "customer-db-${var.env}-igw"
+    Env  = var.env
+  }
+}
+````
+
 ルート
 
 IGWとルートテーブルを接続
