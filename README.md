@@ -297,3 +297,12 @@ resource "aws_route" "public_rt_igw_r" {
 ### 作成理由
 
 インバウンド・アウトバウンドを定義
+
+セキュリティグループ
+
+|  コード  |  必須  |  型  |  詳細  |
+|  ----  |  :--: |  :--:  |  ----  |
+|  name  ||  string  |  タグ  |
+|  description  ||  string  |  説明  |
+|  vpc_id  ||  string  |  VPC ID  |
+|  tags  ||  object  |  タグ  |
