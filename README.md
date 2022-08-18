@@ -291,3 +291,9 @@ resource "aws_route" "public_rt_igw_r" {
   gateway_id             = aws_internet_gateway.igw.id
 }
 ````
+
+## セキュリティーグループ
+
+### 作成理由
+
+インバウンド・アウトバウンドを定義
