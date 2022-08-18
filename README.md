@@ -311,8 +311,10 @@ resource "aws_route" "public_rt_igw_r" {
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
-|  security_group_id  ||  string  |  セキュリティグループID  |
-|  type  ||  enum  |  ingress,egraee  |
-|  protocol  ||  enum  |  tcp,udp,icmp  |
-|  from_port  ||  number  |  開始ポート  |
-|  to_port  ||  number  |  終了ポート  |
+|  security_group_id  |●|  string  |  セキュリティグループID  |
+|  type  |●|  enum  |  ingress,egraee  |
+|  protocol  |●|  enum  |  tcp,udp,icmp  |
+|  from_port  |●|  number  |  開始ポート  |
+|  to_port  |●|  number  |  終了ポート  |
+|  cidr_blocks  ||  string  |  CIDRブロック  |
+|  source_security_group_id  ||  string  |  アクセスしたいセキュリティグループID |
