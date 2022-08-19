@@ -347,4 +347,8 @@ resource "aws_security_group_rule" "web_in_https" {
 
 ※source_security_group_id
 
-ingressのときと
+ingressのときとegressで挙動が違う
+
+ingress
+
+egress
