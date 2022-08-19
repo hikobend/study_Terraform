@@ -429,3 +429,5 @@ resource "aws_db_option_group" "name" {
 |  name  ||  string  |  サブネットグループ名  |
 |  subnet_ids  |●|  string  |  サブネットID  |
 |  tags  ||  object  |  タグ  |
+
+ランダム文字列
