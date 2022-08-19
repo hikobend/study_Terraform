@@ -374,7 +374,7 @@ ingressのときとegressで挙動が違う
 
 データベースに割り当てるメモリなどのリソースの量を指定
 
-aws_
+aws_db_parameter_group
 
 |    |  ingress  |  egress  |
 |  ----  |  ----  |  ----  |
