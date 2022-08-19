@@ -404,7 +404,6 @@ resource "aws_db_parameter_group" "mysql_parametergroup" {
 
 aws_db_option_group
 
-
 |  コード  |  必須  |  型  |  パラメータグループ  |
 |  ----  |  ----  |  ----  |  ----  |
 |  name  ||  string  |  オプショングループ名  |
@@ -422,3 +421,5 @@ resource "aws_db_option_group" "name" {
 ````
 
 サブネットグループ
+
+RDSを展開する先をまとめる
