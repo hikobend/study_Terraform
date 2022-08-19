@@ -330,8 +330,8 @@ resource "aws_security_group" "web_sg" {
 |  protocol  |●|  enum  |  tcp,udp,icmp  |
 |  from_port  |●|  number  |  開始ポート  |
 |  to_port  |●|  number  |  終了ポート  |
-|  cidr_blocks  ||  string  |  CIDRブロック  |
-|  source_security_group_id  ||  string  |  アクセスしたいセキュリティグループID |
+|  cidr_blocks  ||  string  |  CIDRブロックを指定  |
+|  source_security_group_id  ||  string  |  セキュリティグループIDを指定 |
 
 ````terraform
 resource "aws_security_group_rule" "web_in_https" {
@@ -344,3 +344,7 @@ resource "aws_security_group_rule" "web_in_https" {
   source_security_group_id = aws_security_group.app_sg.id #どちらか一方使用する
 }
 ````
+
+※source_security_group_id
+
+ingressのときと
