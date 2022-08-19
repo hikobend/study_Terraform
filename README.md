@@ -383,6 +383,7 @@ aws_db_parameter_group
 |  parameter  ||  block  |  具体的なパラメータ(name : パラメータ名, value : パラメータ値)  |
 |  tags  ||  object  |  タグ  |
 
+````terraform
 resource "aws_db_parameter_group" "mysql_parametergroup" {
   name   = "${var.env}-mysql-parametergroup"
   family = "mysql8.0"
@@ -397,3 +398,19 @@ resource "aws_db_parameter_group" "mysql_parametergroup" {
     value = "utf8mb4"
   }
 }
+````
+
+オプショングループ
+
+
+
+aws_db_option_group
+
+
+|  コード  |  必須  |  型  |  パラメータグループ  |
+|  ----  |  ----  |  ----  |  ----  |
+|  name  ||  string  |  オプショングループ名  |
+|  engine_name  |●|  string  |  関連づけるエンジン名(mysqlなど)  |
+|  major_engine_version  ||  string  |  関連づけるエンジンバージョン(5.7,8.0など)  |
+|  option  ||  block  |  具体的なオプション設定(option_name(必須) : オプション名, option_settings : オプション設定)  |
+|  tags  ||  object  |  タグ  |
