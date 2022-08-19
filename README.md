@@ -376,7 +376,10 @@ ingressのときとegressで挙動が違う
 
 aws_db_parameter_group
 
-|    |  ingress  |  egress  |
-|  ----  |  ----  |  ----  |
-|  source_security_group_id  |  送信元を指定  |  送信先を指定  |
+|  コード  |  必須  |  型  |  パラメータグループ  |
+|  ----  |  ----  |  ----  |  ----  |
+|  name  |  string  |  パラメータグループ名  |
+|  family  |  string  |  パラメータグループのバージョン  |
+|  parameter  |  block  |  具体的なパラメータ(name : パラメータ名, value : パラメータ値)  |
+|  tags  |  object  |  タグ  |
 
