@@ -446,3 +446,15 @@ random_string
 |  override_special  ||  string  |  利用したい特殊文字  |
 
 RDSインスタタンス
+
+aws_db_instance(基本設定)
+
+|  コード  |  必須  |  型  |  内容  |
+|  ----  |  :--:  |  ----  |  ----  |
+|  engine  |  ●  |  string  |  データベースエンジン  |
+|  engine_version  ||  string  |  データベースエンジンのバージョン  |
+|  identifier  |  ●  |  string  |  RDSインスタンスリソース名  |
+|  instance_class  |  ●  |  string  |  インスタンスタイプ  |
+|  username  |  ●  |  string  |  マスターDBのユーザー名  |
+|  password  |  ●  |  string  |  マスターDBユーザーのパスワード  |
+|  tags  ||  object  |  タグ  |
