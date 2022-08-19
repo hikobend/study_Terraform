@@ -405,7 +405,7 @@ resource "aws_db_parameter_group" "mysql_parametergroup" {
 aws_db_option_group
 
 |  コード  |  必須  |  型  |  内容  |
-|  ----  |  ----  |  ----  |  ----  |
+|  ----  |  :--:  |  ----  |  ----  |
 |  name  ||  string  |  オプショングループ名  |
 |  engine_name  |●|  string  |  関連づけるエンジン名(mysqlなど)  |
 |  major_engine_version  ||  string  |  関連づけるエンジンバージョン(5.7,8.0など)  |
@@ -425,7 +425,7 @@ resource "aws_db_option_group" "name" {
 プライベートサブネットを束ねるサブネットグループを作成
 
 |  コード  |  必須  |  型  |  内容  |
-|  ----  |  ----  |  ----  |  ----  |
+|  ----  |  :--:  |  ----  |  ----  |
 |  name  ||  string  |  サブネットグループ名  |
 |  subnet_ids  |●|  string  |  サブネットID  |
 |  tags  ||  object  |  タグ  |
@@ -437,7 +437,7 @@ resource "aws_db_option_group" "name" {
 random_string
 
 |  コード  |  必須  |  型  |  内容  |
-|  ----  |  ----  |  ----  |  ----  |
+|  ----  |  :--:  |  ----  |  ----  |
 |  length  |  ●  |  number  |  ランダム文字列の長さ  |
 |  upper  ||  bool  |  大文字英字を使うかどうか  |
 |  lower  ||  bool  |  小文字文字列を使うかどうか  |
