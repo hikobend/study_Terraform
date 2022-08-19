@@ -330,8 +330,8 @@ resource "aws_security_group" "web_sg" {
 |  protocol  |●|  enum  |  tcp,udp,icmp  |
 |  from_port  |●|  number  |  開始ポート  |
 |  to_port  |●|  number  |  終了ポート  |
-|  cidr_blocks  ||  string  |  CIDRブロックを指定  |
-|  source_security_group_id  ||  string  |  セキュリティグループIDを指定 |
+|  cidr_blocks  |どちらか一方|  string  |  CIDRブロックを指定  |
+|  source_security_group_id  |どちらか一方|  string  |  セキュリティグループIDを指定 |
 
 ````terraform
 resource "aws_security_group_rule" "web_in_https" {
