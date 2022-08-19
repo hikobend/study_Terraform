@@ -471,7 +471,7 @@ aws_db_instance(ストレージ)
 aws_db_instance(ネットワーク)
 
 |  コード  |  必須  |  型  |  内容  |
-|  ----  |  :--:  |  ----  |  ----  |
+|  ----  |  :--:  |  :--:  |  ----  |
 |  multi_az  |    |  bool  |  マルチAZ配置するかどうか  |
 |  availability_zone  ||  string  |  シングルインスタンス時に配置するAZ  |
 |  db_subnet_group_name  |    |  string  |  サブネットグループ名  |
