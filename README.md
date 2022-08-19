@@ -340,6 +340,7 @@ resource "aws_security_group_rule" "web_in_https" {
   protocol = "tcp"
   from_port = 443
   to_port = 443
-  cidr_blocks = [ "0.0.0.0/0" ]
+  cidr_blocks = [ "0.0.0.0/0" ] #どちらか一方を使用する
+  source_security_group_id = aws_security_group.app_sg.id #どちらか一方使用する
 }
 ````
