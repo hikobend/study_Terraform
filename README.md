@@ -402,8 +402,6 @@ resource "aws_db_parameter_group" "mysql_parametergroup" {
 
 オプショングループ
 
-
-
 aws_db_option_group
 
 
@@ -414,3 +412,13 @@ aws_db_option_group
 |  major_engine_version  ||  string  |  関連づけるエンジンバージョン(5.7,8.0など)  |
 |  option  ||  block  |  具体的なオプション設定<br>option_name(必須) : オプション名 <br> option_settings : オプション設定  |
 |  tags  ||  object  |  タグ  |
+
+````terraform
+resource "aws_db_option_group" "name" {
+  name                 = "${var.env}-mysql-optiongroup"
+  engine_name          = "mysql"
+  major_engine_version = "8.0"
+}
+````
+
+サブネットグループ
