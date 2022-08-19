@@ -464,6 +464,17 @@ aws_db_instance(ストレージ)
 |  コード  |  必須  |  型  |  内容  |
 |  ----  |  :--:  |  ----  |  ----  |
 |  allocated_storage  |    |  string  |  割り当てるストレージ(ギガバイト)  |
-|  max_allocated_storage  ||  string  |  オートスケールさせる最大サイズ  |
-|  storage_type  |  ●  |  enum  |  "standerd"(磁気),"gp2"(SSD), "io1"(IOPS SSD)  |
-|  storage_encrypted  |  ●  |  string  |  DBを暗号化するKMS鍵IDまたはfalse  |
+|  max_allocated_storage  |    |  string  |  オートスケールさせる最大サイズ  |
+|  storage_type  |    |  enum  |  "standerd"(磁気),"gp2"(SSD), "io1"(IOPS SSD)  |
+|  storage_encrypted  |    |  string  |  DBを暗号化するKMS鍵IDまたはfalse  |
+
+aws_db_instance(ネットワーク)
+
+|  コード  |  必須  |  型  |  内容  |
+|  ----  |  :--:  |  ----  |  ----  |
+|  multi_az  |    |  bool  |  マルチAZ配置するかどうか  |
+|  availability_zone  ||  string  |  シングルインスタンス時に配置するAZ  |
+|  db_subnet_group_name  |    |  string  |  サブネットグループ名  |
+|  vpc_security_group_ids  |    |  string  |  セキュリティグループID  |
+|  publicky_accessible  |    |  bool  |  パブリックアクセス許可するか  |
+|  port  |    |  number  |  ポート番号  |
