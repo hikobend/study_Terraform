@@ -349,6 +349,6 @@ resource "aws_security_group_rule" "web_in_https" {
 
 ingressのときとegressで挙動が違う
 
-ingress
-
-egress
+|    |  ingress  |  egress  |
+|  ----  |  ----  |  ----  |
+|  source_security_group_id  |  送信元を指定  |  送信先を指定  |
