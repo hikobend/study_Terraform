@@ -378,8 +378,8 @@ aws_db_parameter_group
 
 |  コード  |  必須  |  型  |  パラメータグループ  |
 |  ----  |  ----  |  ----  |  ----  |
-|  name  |  string  |  パラメータグループ名  |
-|  family  |  string  |  パラメータグループのバージョン  |
-|  parameter  |  block  |  具体的なパラメータ(name : パラメータ名, value : パラメータ値)  |
-|  tags  |  object  |  タグ  |
+|  name  ||  string  |  パラメータグループ名  |
+|  family  ||  string  |  パラメータグループのバージョン  |
+|  parameter  ||  block  |  具体的なパラメータ(name : パラメータ名, value : パラメータ値)  |
+|  tags  ||  object  |  タグ  |
 
