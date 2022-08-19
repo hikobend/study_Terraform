@@ -380,7 +380,7 @@ aws_db_parameter_group
 |  ----  |  ----  |  ----  |  ----  |
 |  name  ||  string  |  パラメータグループ名  |
 |  family  ||  string  |  パラメータグループのバージョン  |
-|  parameter  ||  block  |  具体的なパラメータ<br>(name : パラメータ名 <br> value : パラメータ値)  |
+|  parameter  ||  block  |  具体的なパラメータ<br>name : パラメータ名 <br> value : パラメータ値  |
 |  tags  ||  object  |  タグ  |
 
 ````terraform
@@ -412,5 +412,5 @@ aws_db_option_group
 |  name  ||  string  |  オプショングループ名  |
 |  engine_name  |●|  string  |  関連づけるエンジン名(mysqlなど)  |
 |  major_engine_version  ||  string  |  関連づけるエンジンバージョン(5.7,8.0など)  |
-|  option  ||  block  |  具体的なオプション設定<br>(option_name(必須) : オプション名 <br> option_settings : オプション設定)  |
+|  option  ||  block  |  具体的なオプション設定<br>option_name(必須) : オプション名 <br> option_settings : オプション設定  |
 |  tags  ||  object  |  タグ  |
