@@ -307,6 +307,20 @@ resource "aws_route" "public_rt_igw_r" {
 |  vpc_id  ||  string  |  VPC ID  |
 |  tags  ||  object  |  タグ  |
 
+````terraform
+resource "aws_security_group" "web_sg" {
+  name = "${var.env}-web-sg"
+  description = "web front security group"
+  vpc_id = aws_vpc.vpc.id
+
+    tags = {
+    Name = "customer-db-${var.env}-web-sg"
+    Env  = var.env
+  }
+}
+````
+
+
 セキュリティグループルール(インバウンド、アウトバウンド)
 
 |  コード  |  必須  |  型  |  詳細  |
@@ -318,3 +332,14 @@ resource "aws_route" "public_rt_igw_r" {
 |  to_port  |●|  number  |  終了ポート  |
 |  cidr_blocks  ||  string  |  CIDRブロック  |
 |  source_security_group_id  ||  string  |  アクセスしたいセキュリティグループID |
+
+````terraform
+resource "aws_security_group_rule" "web_in_https" {
+  security_group_id = aws_security_group.web_sg.id
+  type = "ingress"
+  protocol = "tcp"
+  from_port = 443
+  to_port = 443
+  cidr_blocks = [ "0.0.0.0/0" ]
+}
+````
