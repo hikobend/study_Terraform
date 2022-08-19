@@ -383,3 +383,17 @@ aws_db_parameter_group
 |  parameter  ||  block  |  具体的なパラメータ(name : パラメータ名, value : パラメータ値)  |
 |  tags  ||  object  |  タグ  |
 
+resource "aws_db_parameter_group" "mysql_parametergroup" {
+  name   = "${var.env}-mysql-parametergroup"
+  family = "mysql8.0"
+
+  parameter {
+    name  = "character_set_database" #データベースの文字コード設定を追加
+    value = "utf8mb4"
+  }
+
+  parameter {
+    name  = "character_set_server" #データベースの文字コード設定を追加
+    value = "utf8mb4"
+  }
+}
