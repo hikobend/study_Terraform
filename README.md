@@ -458,3 +458,12 @@ aws_db_instance(基本設定)
 |  username  |  ●  |  string  |  マスターDBのユーザー名  |
 |  password  |  ●  |  string  |  マスターDBユーザーのパスワード  |
 |  tags  ||  object  |  タグ  |
+
+aws_db_instance(ストレージ)
+
+|  コード  |  必須  |  型  |  内容  |
+|  ----  |  :--:  |  ----  |  ----  |
+|  allocated_storage  |    |  string  |  割り当てるストレージ(ギガバイト)  |
+|  max_allocated_storage  ||  string  |  オートスケールさせる最大サイズ  |
+|  storage_type  |  ●  |  enum  |  "standerd"(磁気),"gp2"(SSD), "io1"(IOPS SSD)  |
+|  storage_encrypted  |  ●  |  string  |  DBを暗号化するKMS鍵IDまたはfalse  |
