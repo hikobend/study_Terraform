@@ -376,7 +376,7 @@ ingressのときとegressで挙動が違う
 
 aws_db_parameter_group
 
-|  コード  |  必須  |  型  |  パラメータグループ  |
+|  コード  |  必須  |  型  |  内容  |
 |  ----  |  ----  |  ----  |  ----  |
 |  name  ||  string  |  パラメータグループ名  |
 |  family  ||  string  |  パラメータグループのバージョン  |
@@ -404,7 +404,7 @@ resource "aws_db_parameter_group" "mysql_parametergroup" {
 
 aws_db_option_group
 
-|  コード  |  必須  |  型  |  パラメータグループ  |
+|  コード  |  必須  |  型  |  内容  |
 |  ----  |  ----  |  ----  |  ----  |
 |  name  ||  string  |  オプショングループ名  |
 |  engine_name  |●|  string  |  関連づけるエンジン名(mysqlなど)  |
@@ -424,10 +424,23 @@ resource "aws_db_option_group" "name" {
 
 プライベートサブネットを束ねるサブネットグループを作成
 
-|  コード  |  必須  |  型  |  パラメータグループ  |
+|  コード  |  必須  |  型  |  内容  |
 |  ----  |  ----  |  ----  |  ----  |
 |  name  ||  string  |  サブネットグループ名  |
 |  subnet_ids  |●|  string  |  サブネットID  |
 |  tags  ||  object  |  タグ  |
 
 ランダム文字列
+
+パスワードを作成
+
+random_string
+
+|  コード  |  必須  |  型  |  内容  |
+|  ----  |  ----  |  ----  |  ----  |
+|  length  |  ●  |  number  |  ランダム文字列の長さ  |
+|  upper  ||  bool  |  大文字英字を使うかどうか  |
+|  lower  ||  bool  |  小文字文字列を使うかどうか  |
+|  number  ||  bool  |  数字を使うかどうか  |
+|  special  ||  bool  |  特殊文字を使うかどうか  |
+|  override_special  ||  string  |  利用したい特殊文字  |
