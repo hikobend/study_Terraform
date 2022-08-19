@@ -422,4 +422,10 @@ resource "aws_db_option_group" "name" {
 
 サブネットグループ
 
-RDSを展開する先をまとめる
+プライベートサブネットを束ねるサブネットグループを作成
+
+|  コード  |  必須  |  型  |  パラメータグループ  |
+|  ----  |  ----  |  ----  |  ----  |
+|  name  ||  string  |  サブネットグループ名  |
+|  subnet_ids  |●|  string  |  サブネットID  |
+|  tags  ||  object  |  タグ  |
