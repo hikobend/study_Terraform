@@ -352,3 +352,9 @@ ingressのときとegressで挙動が違う
 |    |  ingress  |  egress  |
 |  ----  |  ----  |  ----  |
 |  source_security_group_id  |  送信元を指定  |  送信先を指定  |
+
+## RDS
+
+### 作成理由
+
+リレーショナルデーターベースの作成
