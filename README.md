@@ -444,3 +444,5 @@ random_string
 |  number  ||  bool  |  数字を使うかどうか  |
 |  special  ||  bool  |  特殊文字を使うかどうか  |
 |  override_special  ||  string  |  利用したい特殊文字  |
+
+RDSインスタタンス
