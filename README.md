@@ -478,3 +478,11 @@ aws_db_instance(ネットワーク)
 |  vpc_security_group_ids  |    |  string  |  セキュリティグループID  |
 |  publicky_accessible  |    |  bool  |  パブリックアクセス許可するか  |
 |  port  |    |  number  |  ポート番号  |
+
+aws_db_instance(DB設定)
+
+|  コード  |  必須  |  型  |  内容  |
+|  ----  |  :--:  |  :--:  |  ----  |
+|  name  |    |  string  |  データベース名  |
+|  parameter_group_name  ||  string  |  パラメータグループ名  |
+|  option_group_name  |    |  string  |  オプショングループ名  |
