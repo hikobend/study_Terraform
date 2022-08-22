@@ -569,5 +569,11 @@ skip_final_snapshot = true #
 AWS CLIでAMIを検索
 
 ````
-aws ec2 describe-images[ --image-ids <AMI_ID> ] [ --owners <OWNER> ][ --filters "Name= <KEY1>, Values= <VALUE1>,<VALUE2>,..." ]
+aws ec2 describe-images[ --image-ids <AMI_ID> ] [ --owners <OWNER> ] [ --filters "Name= <KEY1>, Values= <VALUE1>,<VALUE2>,..." ]
 ````
+
+|  引数  |  内容  |
+|  ----  |  ----  |
+|  --images-ids  |  AMI IDを指定  |
+|  --owner  |  AMIの所有者を指定。<br>AWSアカウントIDまたはself,amazon,aws-marketplaceを指定。  |
+|  --filters  |  AMI検索のフィルター条件を指定。  |
