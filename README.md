@@ -551,3 +551,15 @@ deletion_protection = false #
 skip_final_snapshot = true #
 ````
 に設定を変更してから、RDSを削除する
+
+## EC2の作成
+
+### 作成に必要なもの
+ 
+・AMI
+
+・キーペア
+
+・サブネット
+
+セキュリティグループ
