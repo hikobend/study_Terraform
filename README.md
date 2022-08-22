@@ -638,4 +638,13 @@ ssh-keygen [-t <TYPE>][-b <BITS>][-f <KEYFILE>]
 |  ----  |  ----  |
 |  -t <TYPE>  |  鍵の種類。"rsa", "dsa"など  |
 |  -b <BITS>  |  鍵のビット数  |
-|  -f <KEYFILE>  |  出力先鍵ファイル。  |
+|  -f <KEYFILE>  |  出力先鍵ファイル  |
+
+aws_key_pair
+
+|  コード  |  必須  |  型  |  内容  |
+|  ----  |  :--:  |  :--:  |  ----  |
+|  owners  |  ●  |  enum  |  所有者。self(自分自身)  |
+|  most_recent  ||  bool  |  最新のものを選択するか  |
+|  executable_users  |    |  string  |  実行ユーザー。"self"またはアカウントID  |
+|  filter  |    |  block  |  検索フィルター<br>name:検索条件<br>values:検索する値|
