@@ -642,9 +642,8 @@ ssh-keygen [-t <TYPE>][-b <BITS>][-f <KEYFILE>]
 
 aws_key_pair
 
-|  コード  |  必須  |  型  |  内容  |
+|  コード  |  必須  |  型  |  説明  |
 |  ----  |  :--:  |  :--:  |  ----  |
-|  owners  |  ●  |  enum  |  所有者。self(自分自身)  |
-|  most_recent  ||  bool  |  最新のものを選択するか  |
-|  executable_users  |    |  string  |  実行ユーザー。"self"またはアカウントID  |
-|  filter  |    |  block  |  検索フィルター<br>name:検索条件<br>values:検索する値|
+|  key_name  ||  string  |  キーペア名  |
+|  public_key  |  ●  |  string  |  公開鍵  |
+|  tags  |    |  object  |  タグ  |
