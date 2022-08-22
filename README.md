@@ -534,7 +534,7 @@ resource "aws_db_instance" "mysql" {
   maintenance_window         = "Mon:05:00-Mon:08:00"
   auto_minor_version_upgrade = false
 
-  deletion_protection = ture #
+  deletion_protection = true #
   skip_final_snapshot = false #
   apply_immediately   = true
 
