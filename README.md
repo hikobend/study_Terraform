@@ -495,3 +495,12 @@ aws_db_instance(バックアップ)
 |  backup_retention_period  ||  bool  |  バックアップを残す数  |
 |  maintenance_window  |    |  string  |  メンテナンスを行う時間帯  |
 |  auto_minor_version_upgrade  |    |  bool  |  自動でマイナーバージョンアップグレードするか  |
+
+
+aws_db_instance(削除防止)
+
+|  コード  |  必須  |  型  |  内容  |
+|  ----  |  :--:  |  :--:  |  ----  |
+|  deletion_protection  |    |  bool  |  削除防止するか  |
+|  skip_final_snapshot  ||  bool  |  削除時のスナップショットをスキップするか  |
+|  apply_immediately  |    |  bool  |  即時反映するか  |
