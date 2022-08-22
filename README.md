@@ -587,3 +587,11 @@ filtersオプションで指定できる検索条件
 |  root-device-type  |  接続するブロックストレージの種類。基本的に"ebs"  |
 |  virtualization-type  |  仮装方式。基本は"hvm"  |
 
+aws_ami
+
+|  コード  |  必須  |  型  |  内容  |
+|  ----  |  :--:  |  :--:  |  ----  |
+|  owners  |  ●  |  enum  |  所有者。self(自分自身)  |
+|  most_recent  ||  bool  |  最新のものを選択するか  |
+|  executable_users  |    |  string  |  実行ユーザー。"self"またはアカウントID  |
+|  filter  |    |  block  |  検索フィルター<br>name:検索条件<br>values:検索する値|
