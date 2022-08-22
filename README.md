@@ -534,8 +534,8 @@ resource "aws_db_instance" "mysql" {
   maintenance_window         = "Mon:05:00-Mon:08:00"
   auto_minor_version_upgrade = false
 
-  deletion_protection = ture
-  skip_final_snapshot = false
+  deletion_protection = ture #
+  skip_final_snapshot = false #
   apply_immediately   = true
 
   tags = {
@@ -545,3 +545,9 @@ resource "aws_db_instance" "mysql" {
 }
 ````
 
+RDSを削除するときは、
+````terraform
+deletion_protection = false #
+skip_final_snapshot = true #
+````
+に設定を変更してから、RDSを削除する
