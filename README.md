@@ -580,10 +580,10 @@ aws ec2 describe-images[ --image-ids <AMI_ID> ] [ --owners <OWNER> ] [ --filters
 
 filtersオプションで指定できる検索条件
 
-|キー|説明|
-|----|----|
-|name|イメージ名|
-|description|イメージ名|
-|root-device-type|接続するブロックストレージの種類。基本的に"ebs"|
-|virtualization-type|仮装方式。基本は"hvm"|
+|  キー  |  説明  |
+|  ----  |  ----  |
+|  name  |  イメージ名 |
+|  description  |  イメージ説明  |
+|  root-device-type  |  接続するブロックストレージの種類。基本的に"ebs"  |
+|  virtualization-type  |  仮装方式。基本は"hvm"  |
 
