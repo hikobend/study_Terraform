@@ -595,3 +595,9 @@ aws_ami
 |  most_recent  ||  bool  |  最新のものを選択するか  |
 |  executable_users  |    |  string  |  実行ユーザー。"self"またはアカウントID  |
 |  filter  |    |  block  |  検索フィルター<br>name:検索条件<br>values:検索する値|
+
+無料利用枠の対象のAMIを所得する
+
+````
+aws ec2 describe-images --image-ids ami-0ecb2a61303230c9d
+````
