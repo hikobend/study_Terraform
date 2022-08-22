@@ -565,3 +565,9 @@ skip_final_snapshot = true #
 ・セキュリティグループ
 
 #### AMIの作成
+
+AWS CLIでAMIを検索
+
+````
+aws ec2 describe-images[ --image-ids <AMI_ID> ] [ --owners <OWNER> ][ --filters "Name= <KEY1>, Values= <VALUE1>,<VALUE2>,..." ]
+````
