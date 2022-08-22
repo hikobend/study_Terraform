@@ -486,3 +486,12 @@ aws_db_instance(DB設定)
 |  name  |    |  string  |  データベース名  |
 |  parameter_group_name  ||  string  |  パラメータグループ名  |
 |  option_group_name  |    |  string  |  オプショングループ名  |
+
+aws_db_instance(バックアップ)
+
+|  コード  |  必須  |  型  |  内容  |
+|  ----  |  :--:  |  :--:  |  ----  |
+|  backup_window  |    |  string  |  バックアップを行う時間帯  |
+|  backup_retention_period  ||  bool  |  バックアップを残す数  |
+|  maintenance_window  |    |  string  |  メンテナンスを行う時間帯  |
+|  auto_minor_version_upgrade  |    |  bool  |  自動でマイナーバージョンアップグレードするか  |
