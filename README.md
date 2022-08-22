@@ -504,3 +504,44 @@ aws_db_instance(削除防止)
 |  deletion_protection  |    |  bool  |  削除防止するか  |
 |  skip_final_snapshot  ||  bool  |  削除時のスナップショットをスキップするか  |
 |  apply_immediately  |    |  bool  |  即時反映するか  |
+
+````terraform
+resource "aws_db_instance" "mysql" {
+  engine         = "mysql"
+  engine_version = "8.0.28"
+  identifier     = "${var.env}-mysql"
+  instance_class = "db.t2.micro"
+  username       = "admin"
+  password       = random_string.db_password.result
+
+  allocated_storage     = 20
+  max_allocated_storage = 50
+  storage_type          = "gp2"
+  storage_encrypted     = false
+
+  multi_az               = false
+  availability_zone      = "ap-northeast-1a"
+  db_subnet_group_name   = aws_db_subnet_group.mysql_subnetgroup.name
+  vpc_security_group_ids = [aws_security_group.db_sg.id]
+  publicly_accessible    = false
+  port                   = 3306
+
+  parameter_group_name = aws_db_parameter_group.mysql_parametergroup.name
+  option_group_name    = aws_db_option_group.mysql_optiongroup.name
+
+  backup_window              = "04:00-05:00"
+  backup_retention_period    = 7
+  maintenance_window         = "Mon:05:00-Mon:08:00"
+  auto_minor_version_upgrade = false
+
+  deletion_protection = ture
+  skip_final_snapshot = false
+  apply_immediately   = true
+
+  tags = {
+    Name = "customer-db-${var.env}-mysql"
+    Env  = var.env
+  }
+}
+````
+
