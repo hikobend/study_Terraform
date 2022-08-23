@@ -96,11 +96,10 @@ terraform {
   }
   
   # 追加
-  backend "s3" {  
-  bucket = "custoemr-db-bucket.tfstate"
-  key = "customer-db-dev.tfstate"
-  region = "ap-northeast-1"
-  profile = "yamanaka@smasta"
+  backend "s3" {
+    bucket  = "custoemr-db-bucket"
+    key     = "customer-db-dev.tfstate"
+    region  = "ap-northeast-1"
   }
 }
 ````
