@@ -666,3 +666,9 @@ aws_instance(基本設定)
 |  tags  |    |  object  |  タグ  |
 
 aws_instance(ネットワーク)
+
+|  コード  |  必須  |  型  |  説明  |
+|  ----  |  :--:  |  :--:  |  ----  |
+|  subnet_id  |    |  string  |  サブネット ID  |
+|  associate_public_ip_address  |    |  bool  |  自動割り当てパブリックIP  |
+|  vpc_security_group_ids  |    |  string  |  セキュリティグループID  |
