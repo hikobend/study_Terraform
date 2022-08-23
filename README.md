@@ -61,7 +61,6 @@ terraform {
 }
 ````
 
-<!-- 
 ## tfstateをS3に移動
 
 ### なぜ実装する必要があるのか。
@@ -109,7 +108,6 @@ terraform {
 terraform init
 ````
 
--->
 
 
 ## 変数の型を設定
