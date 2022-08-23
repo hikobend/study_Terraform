@@ -109,44 +109,10 @@ terraform {
 ````terminal
 terraform init
 ````
-## リソース詳細の確認
 
-指定されたリソースの詳細情報を確認
-
-````
-terraform state show <ADDRESS>
-````
-
-<ADRESS> : 詳細情報を確認したいリソース名
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+|  コード  |  内容  |
+|  ----  |  ----  |
+|  terraform state list ADDRESS <br> ADDRESS : 絞り込みたいリソース名 |  ----  |
 
 
 
