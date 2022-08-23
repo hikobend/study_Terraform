@@ -656,3 +656,12 @@ aws_key_pair
 1. 基本設定
 2. ネットワーク
 3. その他
+
+aws_instance(基本設定)
+
+
+|  コード  |  必須  |  型  |  説明  |
+|  ----  |  :--:  |  :--:  |  ----  |
+|  ami  |  ●  |  string  |  AMI ID  |
+|  instance_type  |  ●  |  enum  |  インスタンスタイプ "t2micro"など  |
+|  tags  |    |  object  |  タグ  |
