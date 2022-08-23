@@ -672,3 +672,12 @@ aws_instance(ネットワーク)
 |  subnet_id  |    |  string  |  サブネット ID  |
 |  associate_public_ip_address  |    |  bool  |  自動割り当てパブリックIP  |
 |  vpc_security_group_ids  |    |  string  |  セキュリティグループID  |
+
+aws_instance(その他)
+
+|  コード  |  必須  |  型  |  説明  |
+|  ----  |  :--:  |  :--:  |  ----  |
+|  iam_instance_profile  |    |  string  |  IAMロール  |
+|  key_name  |    |  string  |  キーペア名  |
+|  user_data  |    |  string  |  ユーザーデータ  |
+
