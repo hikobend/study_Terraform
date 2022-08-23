@@ -80,6 +80,9 @@ terraform {
 9. ブロックパブリックアドレスを元に戻す。
 10. tfstateをバケットに入れるようにterraformを修正する。
 
+|  コード  |  必須  |  型  |  詳細  |
+|  ----  |  :--: |  :--:  |  ----  |
+|  backend  |  ●  |  block  |  bucket : バケット名<br>key : キー<br>region : リージョン<br>profile : プロフィール  |
 
 ````terraform
 terraform {
