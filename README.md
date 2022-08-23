@@ -114,6 +114,8 @@ terraform init
 |  ----  |  ----  |
 |  terraform state list ADDRESS <br> ADDRESS : 絞り込みたいリソース名 |  tfstateのリソースを一覧表示する  |
 |  terraform state show ADDRESS <br> ADDRESS : 詳細情報を確認したいリソース名 |  指定されたリソース名の詳細情報を確認  |
+|  terraform state mv SOURCE DESTINATION <br> SOURCE : 移動元リソース名 <br> DESTINATION : 移動先リソース名 |  指定されたリソース詳細を移動  |
+|  terraform import ADDRESS ID <br> ADDRESS : 取り込み先のリソース名 <br> ID : 取り込みたい稼働中リソースID |  指定されたリソースを取り込む  |
 
 
 
