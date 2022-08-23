@@ -651,3 +651,6 @@ aws_key_pair
 |  key_name  ||  string  |  キーペア名  |
 |  public_key  |  ●  |  string  |  公開鍵  |
 |  tags  |    |  object  |  タグ  |
+
+#### EC2作成
+
