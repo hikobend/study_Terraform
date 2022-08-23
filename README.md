@@ -659,9 +659,10 @@ aws_key_pair
 
 aws_instance(基本設定)
 
-
 |  コード  |  必須  |  型  |  説明  |
 |  ----  |  :--:  |  :--:  |  ----  |
 |  ami  |  ●  |  string  |  AMI ID  |
 |  instance_type  |  ●  |  enum  |  インスタンスタイプ "t2micro"など  |
 |  tags  |    |  object  |  タグ  |
+
+aws_instance(ネットワーク)
