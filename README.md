@@ -112,7 +112,7 @@ terraform init
 
 |  コード  |  内容  |
 |  ----  |  ----  |
-|  terraform state list ADDRESS <br> ADDRESS : 絞り込みたいリソース名 |  ----  |
+|  terraform state list ADDRESS <br> ADDRESS : 絞り込みたいリソース名 |  tfstateのリソースを一覧表示する  |
 
 
 
