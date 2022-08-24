@@ -173,6 +173,7 @@ enviroment = "dev"
 
 ![vpc](https://user-images.githubusercontent.com/92671446/186351089-b6d1e105-ab0a-4ad9-9216-682eaffd1927.png)
 
+### 公式ページのVPC
 ````terraform
 resource "aws_vpc" "main" {
   cidr_block       = "10.0.0.0/16"
