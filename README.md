@@ -19,10 +19,6 @@
 
 ・terraform initをして初期化
 
-## 必要な設定
-
-・tfstateをS3に移動
-
 ## 公式ドキュメント
 
 |  種類  |  説明  |  URL  |
@@ -62,6 +58,9 @@ terraform {
   }
 }
 ````
+## 必要な設定
+
+・tfstateをS3に移動
 
 ## tfstateをS3に移動
 
