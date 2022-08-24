@@ -169,11 +169,9 @@ enviroment = "dev"
 
 ## VPCの作成
 
-### 作成理由
-
 通信をする上で必須
 
-VPC
+![vpc](https://user-images.githubusercontent.com/92671446/186351089-b6d1e105-ab0a-4ad9-9216-682eaffd1927.png)
 
 ````terraform
 resource "aws_vpc" "main" {
@@ -185,8 +183,6 @@ resource "aws_vpc" "main" {
   }
 }
 ````
-
-![vpc](https://user-images.githubusercontent.com/92671446/186351089-b6d1e105-ab0a-4ad9-9216-682eaffd1927.png)
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
