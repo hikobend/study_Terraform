@@ -175,6 +175,17 @@ enviroment = "dev"
 
 VPC
 
+````terraform
+resource "aws_vpc" "main" {
+  cidr_block       = "10.0.0.0/16"
+  instance_tenancy = "default"
+
+  tags = {
+    Name = "main"
+  }
+}
+````
+
 ![vpc](https://user-images.githubusercontent.com/92671446/186351089-b6d1e105-ab0a-4ad9-9216-682eaffd1927.png)
 
 |  コード  |  必須  |  型  |  詳細  |
