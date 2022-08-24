@@ -185,12 +185,11 @@ resource "aws_vpc" "main" {
 }
 ````
 
+### 代表的なリファレンス
+
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
 |  cidr_block  |  ●  |  string  |  IPv4CIDRブロック  |
-|  assign_generated_ipv6_cidr_block  ||  string  |  IPv6CIdRブロック  |
-|  instance_tenancy  ||  enum  |  テナンシー(default, dedicated)  |
-|  enable_dns_support  ||  bool  |  DNS解決  |
 |  enable_dns_hostnames  ||  bool  |  DNSホスト名  |
 |  tags  ||  object  |  タグ  |
 
@@ -207,6 +206,8 @@ resource "aws_vpc" "vpc" {
   }
 }
 ````
+
+![DNSホスト名を有効にした方が良い理由](https://qiita.com/fumiya-konno/items/f94ed3e3c114793c898a)
 
 ## サブネットの作成
 
