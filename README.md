@@ -169,6 +169,8 @@ enviroment = "dev"
 
 ## VPCの作成
 
+[VPC公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc)
+
 通信をする上で必須
 
 ![vpc](https://user-images.githubusercontent.com/92671446/186351089-b6d1e105-ab0a-4ad9-9216-682eaffd1927.png)
