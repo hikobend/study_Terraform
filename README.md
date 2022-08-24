@@ -175,6 +175,8 @@ enviroment = "dev"
 
 VPC
 
+![vpc](https://user-images.githubusercontent.com/92671446/186351089-b6d1e105-ab0a-4ad9-9216-682eaffd1927.png)
+
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
 |  cidr_block  |  ●  |  string  |  IPv4CIDRブロック  |
