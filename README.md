@@ -50,6 +50,17 @@
 
 ## バージョン設定コード
 
+````terraform
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 1.0"
+    }
+  }
+}
+````
+
 |  コード  |  詳細  |
 |  ----  |  ----  |
 |required_version|terraformのバージョン|
