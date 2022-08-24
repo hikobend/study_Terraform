@@ -61,6 +61,8 @@ terraform {
 }
 ````
 
+https://www.terraform.io/language/providers/requirements
+
 |  コード  |  詳細  |
 |  ----  |  ----  |
 |required_version|terraformのバージョン|
