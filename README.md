@@ -196,18 +196,15 @@ resource "aws_vpc" "main" {
 ````terraform
 resource "aws_vpc" "vpc" {
   cidr_block                       = "10.0.0.0/20"
-  instance_tenancy                 = "default"
-  enable_dns_support               = true
   enable_dns_hostnames             = true
-  assign_generated_ipv6_cidr_block = false
 
   tags = {
-    Name = "customer-db-${var.env}"
+    Name = "customer-db-${var.env}-vpc"
+    Env  = var.env
   }
-}
-````
+}````
 
-![DNSホスト名を有効にした方が良い理由](https://qiita.com/fumiya-konno/items/f94ed3e3c114793c898a)
+[DNSホスト名を有効にした方が良い理由](https://qiita.com/fumiya-konno/items/f94ed3e3c114793c898a)
 
 ## サブネットの作成
 
