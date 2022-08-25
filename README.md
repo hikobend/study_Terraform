@@ -276,7 +276,7 @@ resource "aws_subnet" "private_subnet_1a" {
 
 パブリックIPを許可・拒否することで、Publicサブネットかprivateサブネットを設定する。
 
-## ルートテーブル・アソシエーション作成
+## ルートテーブル作成
 
 [公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table)
 
@@ -325,6 +325,41 @@ resource "aws_route_table" "public_rt" {
 ````
 
 ### 実装時の注意点など
+
+アソシエーションも作成する。
+
+## ルートテーブルアソシエーション作成
+
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association)
+
+### 公式ページのコードサンプル
+
+````terraform
+resource "aws_main_route_table_association" "a" {
+  vpc_id         = aws_vpc.foo.id
+  route_table_id = aws_route_table.bar.id
+}
+````
+
+### 代表的なリファレンス
+
+|  コード  |  必須  |  型  |  詳細  |
+|  ----  |  :--: |  :--:  |  ----  |
+|  vpc_id  |  ●  |  string  |  設置するVPCを指定  |
+
+````terraform
+resource "aws_route_table" "public_rt" {
+  vpc_id = aws_vpc.vpc.id
+
+  tags = {
+    Name = "customer-db-${var.env}-public-rt"
+    Type = "public"
+    Env  = var.env
+  }
+}
+````
+
+
 
 ## インターネットゲートウェイ(以下、IGWと省略)
 
@@ -428,7 +463,7 @@ resource "aws_security_group_rule" "web_in_https" {
 }
 ````
 
-※source_security_group_id
+・source_security_group_id
 
 ingressのときとegressで挙動が違う
 
