@@ -276,9 +276,10 @@ resource "aws_subnet" "private_subnet_1a" {
 
 パブリックIPを許可・拒否することで、Publicサブネットかprivateサブネットを設定する。
 
-## 〇〇の作成
+## ルートテーブル・アソシエーション作成
 
-[公式ページ]　()
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table)
+
 
 機能説明
 
