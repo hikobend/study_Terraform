@@ -212,7 +212,7 @@ resource "aws_vpc" "vpc" {
 
 ## サブネットの作成
 
-[公式ページ]　(https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)
 
 機能説明
 
