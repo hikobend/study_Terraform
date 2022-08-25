@@ -361,9 +361,8 @@ resource "aws_route_table" "public_rt" {
 
 ## IGWの作成
 
-[公式ページ]　()
-
-https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway
+)
 
 機能説明
 
