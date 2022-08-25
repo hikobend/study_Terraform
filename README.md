@@ -401,11 +401,11 @@ resource "aws_internet_gateway" "igw" {
 
 ## IGWアソシエーションの作成
 
-[公式ページ]　()
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route)
 
 機能説明
 
-![アーキテクチャ]()
+IGWとルートテーブルを繋げる
 
 ### 公式ページのコードサンプル
 
@@ -422,10 +422,16 @@ resource "aws_route" "r" {
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
-|  〇〇  |  ●  |  string  |  〇〇  |
+|  route_table_id  |  ●  |  string  |  ルーティングするテーブルのID  |
+|  destination_cidr_block  |  ●  |  string  |  宛先CIDRブロック  |
+|  gateway_id  |    |  string  |  VPCインターネットゲートウェイか仮想プライベートゲートウェイ  |
 
 ````terraform
-実際に作成したコード
+resource "aws_route" "public_rt_igw_r" {
+  route_table_id         = aws_route_table.public_rt.id
+  destination_cidr_block = "0.0.0.0/0"
+  gateway_id             = aws_internet_gateway.igw.id
+}
 ````
 
 ### 実装時の注意点など
