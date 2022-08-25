@@ -236,7 +236,10 @@ resource "aws_subnet" "main" {
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
-|  〇〇  |  ●  |  string  |  〇〇  |
+|  vpc_id  |  ●  |  string  |  設置するVPCを場所  |
+|  availability_zone  |  ●  |  string  |  設置するAZを指定  |
+|  cidr_block  |  ●  |  number(?)  |  サブネットの範囲  |
+|  map_public_ip_on_launch  |  ●  |  bool  |  パブリックIPを設定するか  |
 
 ````terraform
 実際に作成したコード
