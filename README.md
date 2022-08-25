@@ -274,6 +274,7 @@ resource "aws_subnet" "private_subnet_1a" {
 
 ### 実装時の注意点など
 
+パブリックIPを許可・拒否することで、Publicサブネットかprivateサブネットを設定する。
 
 ## ルートテーブル、ルートテーブルアソシエーション  
 
