@@ -434,35 +434,33 @@ resource "aws_route" "public_rt_igw_r" {
 }
 ````
 
-## セキュリティーグループ
+## セキュリティグループの作成
 
-### 作成理由
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule)
 
-インバウンド・アウトバウンドを定義
+機能説明
 
-セキュリティグループ(箱)
+![アーキテクチャ]()
 
-aws_security_group
+### 公式ページのコードサンプル
+
+````terraform
+コードをはる
+````
+
+### 代表的なリファレンス
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
-|  name  ||  string  |  タグ  |
-|  description  ||  string  |  説明  |
-|  vpc_id  ||  string  |  VPC ID  |
-|  tags  ||  object  |  タグ  |
+|  〇〇  |  ●  |  string  |  〇〇  |
 
 ````terraform
-resource "aws_security_group" "web_sg" {
-  name = "${var.env}-web-sg"
-  description = "web front security group"
-  vpc_id = aws_vpc.vpc.id
-
-    tags = {
-    Name = "customer-db-${var.env}-web-sg"
-    Env  = var.env
-  }
-}
+実際に作成したコード
 ````
+
+### 実装時の注意点など
+
+
 
 セキュリティグループルール(インバウンド、アウトバウンド)
 
