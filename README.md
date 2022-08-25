@@ -399,15 +399,40 @@ resource "aws_internet_gateway" "igw" {
 
 ### 実装時の注意点など
 
+## IGWアソシエーションの作成
 
-IGWアソシエーション
+[公式ページ]　()
 
+機能説明
+
+![アーキテクチャ]()
+
+### 公式ページのコードサンプル
+
+````terraform
 resource "aws_route" "r" {
   route_table_id            = "rtb-4fbb3ac4"
   destination_cidr_block    = "10.0.1.0/22"
   vpc_peering_connection_id = "pcx-45ff3dc1"
   depends_on                = [aws_route_table.testing]
 }
+````
+
+### 代表的なリファレンス
+
+|  コード  |  必須  |  型  |  詳細  |
+|  ----  |  :--: |  :--:  |  ----  |
+|  〇〇  |  ●  |  string  |  〇〇  |
+
+````terraform
+実際に作成したコード
+````
+
+### 実装時の注意点など
+
+
+
+
 
 
 IGWとルートテーブルを接続
