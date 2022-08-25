@@ -359,33 +359,40 @@ resource "aws_route_table" "public_rt" {
 }
 ````
 
+## IGWの作成
 
+[公式ページ]　()
 
-## インターネットゲートウェイ(以下、IGWと省略)
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway
 
-### 作成理由
+機能説明
 
-VPCに接続し、ルートテーブルと関連づけて、インターネットに出られるようにする。
+![アーキテクチャ]()
 
-IGW
-
-aws_internet_gateway
-
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  vpc_id  |  ●  |  string  |  VPC ID  |
-|  tags  ||  object  |  タグ  |
+### 公式ページのコードサンプル
 
 ````terraform
-resource "aws_internet_gateway" "igw" {
-  vpc_id = aws_vpc.vpc.id
+resource "aws_internet_gateway" "gw" {
+  vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "customer-db-${var.env}-igw"
-    Env  = var.env
+    Name = "main"
   }
 }
 ````
+
+### 代表的なリファレンス
+
+|  コード  |  必須  |  型  |  詳細  |
+|  ----  |  :--: |  :--:  |  ----  |
+|  〇〇  |  ●  |  string  |  〇〇  |
+
+````terraform
+実際に作成したコード
+````
+
+### 実装時の注意点など
+
 
 IGWアソシエーション
 
