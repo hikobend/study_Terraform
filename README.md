@@ -436,7 +436,7 @@ resource "aws_route" "public_rt_igw_r" {
 
 ## セキュリティグループの作成
 
-[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule)
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group)
 
 機能説明
 
