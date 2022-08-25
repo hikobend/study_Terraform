@@ -440,12 +440,20 @@ resource "aws_route" "public_rt_igw_r" {
 
 機能説明
 
-![アーキテクチャ]()
+![アーキテクチャ](https://user-images.githubusercontent.com/92671446/186593375-e1a03e8a-d057-4fe4-8b44-be03552d5701.png)
 
 ### 公式ページのコードサンプル
 
 ````terraform
-コードをはる
+resource "aws_security_group_rule" "example" {
+  type              = "ingress"
+  from_port         = 0
+  to_port           = 65535
+  protocol          = "tcp"
+  cidr_blocks       = [aws_vpc.example.cidr_block]
+  ipv6_cidr_blocks  = [aws_vpc.example.ipv6_cidr_block]
+  security_group_id = "sg-123456"
+}
 ````
 
 ### 代表的なリファレンス
