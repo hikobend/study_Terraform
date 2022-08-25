@@ -276,53 +276,31 @@ resource "aws_subnet" "private_subnet_1a" {
 
 パブリックIPを許可・拒否することで、Publicサブネットかprivateサブネットを設定する。
 
-## ルートテーブル、ルートテーブルアソシエーション  
+## 〇〇の作成
 
-### 作成理由
+[公式ページ]　()
 
-ネットワークの経路を設定するコンポーネント。サブネット内の通信がどの宛先のネットワークに対して、どのコンポーネント(IGWやEC2)に転送されてほしいか設定。VPCとサブネットを紐づける。
+機能説明
 
-ルートテーブル
+![アーキテクチャ]()
 
-枠を作成する
+### 公式ページのコードサンプル
 
-aws_route_table
+````terraform
+コードをはる
+````
+
+### 代表的なリファレンス
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
-|  vpc_id  |  ●  |  string  |  VPC ID  |
-|  tags  ||  object  |  タグ  |
+|  〇〇  |  ●  |  string  |  〇〇  |
 
 ````terraform
-resource "aws_route_table" "public_rt" {
-  vpc_id = aws_vpc.vpc.id
-
-  tags = {
-    Name = "customer-db-${var.env}-public-rt"
-    Type = "public"
-    Env  = var.env
-  }
-}
+実際に作成したコード
 ````
 
-ルートテーブルアソシエーション
-
-枠に入れるサブネットを選択
-
-aws_route_table_association
-
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  route_table_id  |  ●  |  string  |  ルートテーブル ID  |
-|  subnet_id  |  ●  |  string  |  サブネット ID  |
-|  tags  ||  object  |  タグ  |
-
-````terraform
-resource "aws_route_table_association" "public_rt_1a" {
-  route_table_id = aws_route_table.public_rt.id
-  subnet_id      = aws_subnet.public_subnet_1a.id
-}
-````
+### 実装時の注意点など
 
 ## インターネットゲートウェイ(以下、IGWと省略)
 
