@@ -310,10 +310,18 @@ resource "aws_route_table" "example" {
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
-|  〇〇  |  ●  |  string  |  〇〇  |
+|  vpc_id  |  ●  |  string  |  設置するVPCを指定  |
 
 ````terraform
-実際に作成したコード
+resource "aws_route_table" "public_rt" {
+  vpc_id = aws_vpc.vpc.id
+
+  tags = {
+    Name = "customer-db-${var.env}-public-rt"
+    Type = "public"
+    Env  = var.env
+  }
+}
 ````
 
 ### 実装時の注意点など
