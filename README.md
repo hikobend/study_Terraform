@@ -283,7 +283,7 @@ resource "aws_subnet" "private_subnet_1a" {
 
 機能説明
 
-![アーキテクチャ]()
+![アーキテクチャ](https://user-images.githubusercontent.com/92671446/186557734-90ed2e7d-b653-44f4-9183-5ede7c3caf7f.png)
 
 ### 公式ページのコードサンプル
 
