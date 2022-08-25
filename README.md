@@ -242,7 +242,34 @@ resource "aws_subnet" "main" {
 |  map_public_ip_on_launch  |  ●  |  bool  |  パブリックIPを設定するか  |
 
 ````terraform
-実際に作成したコード
+resource "aws_subnet" "public_subnet_1a" {
+  vpc_id                  = aws_vpc.vpc.id
+  availability_zone       = "ap-northeast-1a"
+  cidr_block              = "10.0.1.0/24"
+  map_public_ip_on_launch = true
+
+  tags = {
+    Name = "customer-db-${var.env}-public-1a"
+    Type = "public"
+    Env  = var.env
+  }
+}
+````
+
+
+````terraform
+resource "aws_subnet" "private_subnet_1a" {
+  vpc_id                  = aws_vpc.vpc.id
+  availability_zone       = "ap-northeast-1a"
+  cidr_block              = "10.0.3.0/24"
+  map_public_ip_on_launch = false
+
+  tags = {
+    Name = "customer-db-${var.env}-private-1a"
+    Type = "private"
+    Env  = var.env
+  }
+}
 ````
 
 ### 実装時の注意点など
