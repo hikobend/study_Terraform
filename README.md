@@ -366,7 +366,7 @@ resource "aws_route_table" "public_rt" {
 
 機能説明
 
-![アーキテクチャ]()
+![名称未設定](https://user-images.githubusercontent.com/92671446/186575981-e7c1c6d8-1e74-471a-9622-d881a2c78734.png)
 
 ### 公式ページのコードサンプル
 
@@ -384,16 +384,31 @@ resource "aws_internet_gateway" "gw" {
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
-|  〇〇  |  ●  |  string  |  〇〇  |
+|  vpc_id  |  ●  |  string  |  設置するVPC  |
 
 ````terraform
-実際に作成したコード
+resource "aws_internet_gateway" "igw" {
+  vpc_id = aws_vpc.vpc.id
+
+  tags = {
+    Name = "customer-db-${var.env}-igw"
+    Env  = var.env
+  }
+}
 ````
 
 ### 実装時の注意点など
 
 
 IGWアソシエーション
+
+resource "aws_route" "r" {
+  route_table_id            = "rtb-4fbb3ac4"
+  destination_cidr_block    = "10.0.1.0/22"
+  vpc_peering_connection_id = "pcx-45ff3dc1"
+  depends_on                = [aws_route_table.testing]
+}
+
 
 IGWとルートテーブルを接続
 
