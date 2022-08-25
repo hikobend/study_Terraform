@@ -216,8 +216,8 @@ resource "aws_vpc" "vpc" {
 
 機能説明
 
-![アーキテクチャ](![名称未設定](https://user-images.githubusercontent.com/92671446/186549564-59337186-8197-45ab-b566-a1b2883e1a21.png)
-)
+![サブネット](https://user-images.githubusercontent.com/92671446/186549564-59337186-8197-45ab-b566-a1b2883e1a21.png)
+
 
 ### 公式ページのコードサンプル
 
