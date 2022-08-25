@@ -480,7 +480,16 @@ resource "aws_security_group" "allow_tls" {
 |  〇〇  |  ●  |  string  |  〇〇  |
 
 ````terraform
-実際に作成したコード
+resource "aws_security_group" "web_sg" {
+  name        = "${var.env}-web-sg"
+  description = "web front security group"
+  vpc_id      = aws_vpc.vpc.id
+
+  tags = {
+    Name = "customer-db-${var.env}-web-sg"
+    Env  = var.env
+  }
+}
 ````
 
 ### 実装時の注意点など
