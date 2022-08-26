@@ -796,11 +796,9 @@ resource "aws_db_instance" "mysql" {
 ## EC2の作成
 
 ### 必要な設定
-・オプショングループ
+・AMI
 
-・パラメータグループ
-
-[公式ページ]　()
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)
 
 機能説明
 
@@ -809,7 +807,30 @@ resource "aws_db_instance" "mysql" {
 ### 公式ページのコードサンプル
 
 ````terraform
-コードをはる
+data "aws_ami" "ubuntu" {
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  owners = ["099720109477"] # Canonical
+}
+
+resource "aws_instance" "web" {
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
 ````
 
 ### 代表的なリファレンス
