@@ -849,18 +849,5 @@ resource "aws_instance" "web" {
 ### 呼び出すためのプログラム
 
 ````
-
+aws ec2 describe-images --image-ids ami-0f36dcfcc94112ea
 ````
-
-### 代表的なリファレンス
-
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  〇〇  |  ●  |  string  |  〇〇  |
-
-````terraform
-実際に作成したコード
-````
-
-### 実装時の注意点など
-
