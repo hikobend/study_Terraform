@@ -641,7 +641,8 @@ resource "aws_db_option_group" "example" {
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
-|  〇〇  |  ●  |  string  |  〇〇  |
+|  engine_name  |  ●  |  string  |  オプション グループを関連付けるエンジンの名前を指定  |
+|  major_engine_version  |  ●  |  string  |  このオプション グループを関連付けるエンジンのメジャー バージョンを指定  |
 
 ````terraform
 実際に作成したコード
