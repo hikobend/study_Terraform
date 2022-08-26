@@ -573,7 +573,20 @@ resource "aws_db_parameter_group" "default" {
 |  〇〇  |  ●  |  string  |  〇〇  |
 
 ````terraform
-実際に作成したコード
+resource "aws_db_parameter_group" "mysql_parametergroup" {
+  name   = "${var.env}-mysql-parametergroup"
+  family = "mysql8.0"
+
+  parameter {
+    name  = "character_set_database"
+    value = "utf8mb4"
+  }
+
+  parameter {
+    name  = "character_set_server"
+    value = "utf8mb4"
+  }
+}
 ````
 
 ### 実装時の注意点など
