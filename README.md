@@ -849,5 +849,30 @@ resource "aws_instance" "web" {
 ### 呼び出すためのプログラム
 
 ````
-aws ec2 describe-images --image-ids ami-0f36dcfcc94112ea
+aws ec2 describe-images --image-ids ami-number
+````
+
+### 公式ページのコードサンプル
+
+````terraform
+data "aws_ami" "example" {
+  most_recent      = true
+  name_regex       = "^myami-\\d{3}"
+  owners           = ["self"]
+
+  filter {
+    name   = "name"
+    values = ["myami-*"]
+  }
+
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}
 ````
