@@ -591,3 +591,5 @@ resource "aws_db_parameter_group" "mysql_parametergroup" {
 
 ### 実装時の注意点など
 
+character_set_databaseとcharacter_set_serverは必須
+
