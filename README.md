@@ -645,7 +645,11 @@ resource "aws_db_option_group" "example" {
 |  major_engine_version  |  ●  |  string  |  このオプション グループを関連付けるエンジンのメジャー バージョンを指定  |
 
 ````terraform
-実際に作成したコード
+resource "aws_db_option_group" "mysql_optiongroup" {
+  name                 = "${var.env}-mysql-optiongroup"
+  engine_name          = "mysql"
+  major_engine_version = "8.0"
+}
 ````
 
 ### 実装時の注意点など
