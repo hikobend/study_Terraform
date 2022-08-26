@@ -726,30 +726,30 @@ resource "aws_db_instance" "default" {
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
-|  engine  |  ●  |  string  |  〇〇  |
-|  engine_version  |  ●  |  string  |  〇〇  |
-|  identifier  |  ●  |  string  |  〇〇  |
-|  instance_class  |  ●  |  string  |  〇〇  |
-|  username  |  ●  |  string  |  〇〇  |
-|  password  |  ●  |  string  |  〇〇  |
-|  allocated_storage  |  ●  |  string  |  〇〇  |
-|  max_allocated_storage  |  ●  |  string  |  〇〇  |
-|  storage_type  |  ●  |  string  |  〇〇  |
-|  storage_encrypted  |  ●  |  string  |  〇〇  |
-|  multi_az  |  ●  |  string  |  〇〇  |
-|  availability_zone  |  ●  |  string  |  〇〇  |
-|  db_subnet_group_name  |  ●  |  string  |  〇〇  |
-|  vpc_security_group_ids  |  ●  |  string  |  〇〇  |
-|  publicly_accessible  |  ●  |  string  |  〇〇  |
-|  port  |  ●  |  string  |  〇〇  |
-|  parameter_group_name  |  ●  |  string  |  〇〇  |
-|  option_group_name  |  ●  |  string  |  〇〇  |
-|  backup_window  |  ●  |  string  |  〇〇  |
-|  backup_relention_period  |  ●  |  string  |  〇〇  |
-|  maintenance_window  |  ●  |  string  |  〇〇  |
-|  deletion_protection  |  ●  |  string  |  〇〇  |
-|  skip_final_snapshot  |  ●  |  string  |  〇〇  |
-|  apply_immediately  |  ●  |  string  |  〇〇  |
+|  engine  |  ●  |  string  |  指定するデータベースエンジン  |
+|  engine_version  |    |  string  |  使用するエンジンのバージョン  |
+|  identifier  |  ●  |  string  |  RDSインスタンスの名前  |
+|  instance_class  |  ●  |  string  |  RDSのインスタンスタイプ  |
+|  username  |  ●  |  string  |  データベースのマスターユーザー  |
+|  password  |  ●  |  string  |  パスワード  |
+|  allocated_storage  |  ●  |  string  |  割り当てたストレージ  |
+|  max_allocated_storage  |  ●  |  string  |  RDSが自動的にスケーリングできる上限  |
+|  storage_type  |  ●  |  string  |  standard gp2 io1のいずれか  |
+|  storage_encrypted  |  ●  |  string  |  DBインスタンスが暗号化されているか  |
+|  multi_az  |  ●  |  string  |  RDSインスタンスがマルチAZかどうか指定  |
+|  availability_zone  |  ●  |  string  |  RDSインスタンスのAZ  |
+|  db_subnet_group_name  |  ●  |  string  |  DBサブネット名  |
+|  vpc_security_group_ids  |  ●  |  string  |  関連付けるDBセキュリティグループのリスト  |
+|  publicly_accessible  |  ●  |  string  |  インスタンスが公開されているか制御  |
+|  port  |  ●  |  string  |  DBが接続を受け入れるポート  |
+|  parameter_group_name  |  ●  |  string  |  関連づけるDBパラメータグループ  |
+|  option_group_name  |  ●  |  string  |  関連づけたオプショングループ  |
+|  backup_window  |    |  string  |  自動バックアップが有効になっている場合に作成される毎日の時間範囲  |
+|  backup_retention_period  |  ●  |  string  |  バックアップを保持する日数  |
+|  maintenance_window  |  ●  |  string  |  メンテナンスを実行するウィンドウ  |
+|  deletion_protection  |  ●  |  string  |  DBインスタンスで削除保護を有効にする必要がある場合に設定|
+|  skip_final_snapshot  |  ●  |  string  |  DBインスタンスを削除する前に、最終的なDBスナップショットを作成するか  |
+|  apply_immediately  |  ●  |  string  |  データベースの変更をすぐに適応するか指定  |
 
 ````terraform
 resource "aws_db_instance" "mysql" {
