@@ -593,3 +593,30 @@ resource "aws_db_parameter_group" "mysql_parametergroup" {
 
 character_set_databaseとcharacter_set_serverは必須
 
+## オプショングループの作成
+
+### 必要な設定
+
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_option_group)
+
+機能説明
+
+データベースサーバで使用できる機能を設定
+
+### 公式ページのコードサンプル
+
+````terraform
+コードをはる
+````
+
+### 代表的なリファレンス
+
+|  コード  |  必須  |  型  |  詳細  |
+|  ----  |  :--: |  :--:  |  ----  |
+|  〇〇  |  ●  |  string  |  〇〇  |
+
+````terraform
+実際に作成したコード
+````
+
+### 実装時の注意点など
