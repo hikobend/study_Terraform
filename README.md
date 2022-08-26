@@ -835,6 +835,22 @@ resource "aws_instance" "web" {
   }
 }
 ````
+## AMIのイメージ取得
+
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)
+
+機能説明
+
+サーバーを立てるために使用
+
+![アーキテクチャ](https://user-images.githubusercontent.com/92671446/186848388-28221914-392e-4514-a30e-33b5f1c1bf52.png)
+
+
+### 呼び出すためのプログラム
+
+````
+
+````
 
 ### 代表的なリファレンス
 
@@ -847,3 +863,4 @@ resource "aws_instance" "web" {
 ````
 
 ### 実装時の注意点など
+
