@@ -550,32 +550,18 @@ ingressのときとegressで挙動が違う
 ### 公式ページのコードサンプル
 
 ````terraform
-resource "aws_db_option_group" "example" {
-  name                     = "option-group-test-terraform"
-  option_group_description = "Terraform Option Group"
-  engine_name              = "sqlserver-ee"
-  major_engine_version     = "11.00"
+resource "aws_db_parameter_group" "default" {
+  name   = "rds-pg"
+  family = "mysql5.6"
 
-  option {
-    option_name = "Timezone"
-
-    option_settings {
-      name  = "TIME_ZONE"
-      value = "UTC"
-    }
+  parameter {
+    name  = "character_set_server"
+    value = "utf8"
   }
 
-  option {
-    option_name = "SQLSERVER_BACKUP_RESTORE"
-
-    option_settings {
-      name  = "IAM_ROLE_ARN"
-      value = aws_iam_role.example.arn
-    }
-  }
-
-  option {
-    option_name = "TDE"
+  parameter {
+    name  = "character_set_client"
+    value = "utf8"
   }
 }
 ````
