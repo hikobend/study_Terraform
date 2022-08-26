@@ -804,7 +804,8 @@ resource "aws_db_instance" "mysql" {
 
 サーバー
 
-![アーキテクチャ]()
+![アーキテクチャ](https://user-images.githubusercontent.com/92671446/186848388-28221914-392e-4514-a30e-33b5f1c1bf52.png)
+
 
 ### 公式ページのコードサンプル
 
