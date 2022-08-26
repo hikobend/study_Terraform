@@ -643,6 +643,7 @@ resource "aws_db_option_group" "example" {
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
+|  name  |    |  string  |  RDSの名前  |
 |  engine_name  |  ●  |  string  |  オプション グループを関連付けるエンジンの名前を指定  |
 |  major_engine_version  |  ●  |  string  |  このオプション グループを関連付けるエンジンのメジャー バージョンを指定  |
 
@@ -705,8 +706,6 @@ resource "aws_db_subnet_group" "mysql_subnetgroup" {
 
 機能説明
 
-![アーキテクチャ]()
-
 ### 公式ページのコードサンプル
 
 ````terraform
@@ -727,7 +726,30 @@ resource "aws_db_instance" "default" {
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
-|  〇〇  |  ●  |  string  |  〇〇  |
+|  engine  |  ●  |  string  |  〇〇  |
+|  engine_version  |  ●  |  string  |  〇〇  |
+|  identifier  |  ●  |  string  |  〇〇  |
+|  instance_class  |  ●  |  string  |  〇〇  |
+|  username  |  ●  |  string  |  〇〇  |
+|  password  |  ●  |  string  |  〇〇  |
+|  allocated_storage  |  ●  |  string  |  〇〇  |
+|  max_allocated_storage  |  ●  |  string  |  〇〇  |
+|  storage_type  |  ●  |  string  |  〇〇  |
+|  storage_encrypted  |  ●  |  string  |  〇〇  |
+|  multi_az  |  ●  |  string  |  〇〇  |
+|  availability_zone  |  ●  |  string  |  〇〇  |
+|  db_subnet_group_name  |  ●  |  string  |  〇〇  |
+|  vpc_security_group_ids  |  ●  |  string  |  〇〇  |
+|  publicly_accessible  |  ●  |  string  |  〇〇  |
+|  port  |  ●  |  string  |  〇〇  |
+|  parameter_group_name  |  ●  |  string  |  〇〇  |
+|  option_group_name  |  ●  |  string  |  〇〇  |
+|  backup_window  |  ●  |  string  |  〇〇  |
+|  backup_relention_period  |  ●  |  string  |  〇〇  |
+|  maintenance_window  |  ●  |  string  |  〇〇  |
+|  deletion_protection  |  ●  |  string  |  〇〇  |
+|  skip_final_snapshot  |  ●  |  string  |  〇〇  |
+|  apply_immediately  |  ●  |  string  |  〇〇  |
 
 ````terraform
 resource "aws_db_instance" "mysql" {
