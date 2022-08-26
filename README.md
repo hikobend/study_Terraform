@@ -117,9 +117,9 @@ provider "aws" {
 9. ブロックパブリックアドレスを元に戻す。
 10. tfstateをバケットに入れるようにterraformを修正する。
 
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  backend  |  ●  |  block  |  bucket : バケット名<br>key : キー<br>region : リージョン<br>profile : プロフィール  |
+|  コード  |  型  |  詳細  |
+|  ----  |  :--:  |  ----  |
+|  backend  |  block  |  bucket : バケット名<br>key : キー<br>region : リージョン<br>profile : プロフィール  |
 
 ````terraform
 terraform {
@@ -190,11 +190,11 @@ resource "aws_vpc" "main" {
 
 ### 代表的なリファレンス
 
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  cidr_block  |  ●  |  string  |  IPv4CIDRブロック  |
-|  enable_dns_hostnames  ||  bool  |  DNSホスト名  |
-|  tags  ||  object  |  タグ  |
+|  コード  |  型  |  詳細  |
+|  ----  |  :--:  |  ----  |
+|  cidr_block  |  string  |  IPv4CIDRブロック  |
+|  enable_dns_hostnames  |  bool  |  DNSホスト名  |
+|  tags  |  object  |  タグ  |
 
 ````terraform
 resource "aws_vpc" "vpc" {
@@ -234,12 +234,12 @@ resource "aws_subnet" "main" {
 
 ### 代表的なリファレンス
 
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  vpc_id  |  ●  |  string  |  設置するVPCを場所  |
-|  availability_zone  |  ●  |  string  |  設置するAZを指定  |
-|  cidr_block  |  ●  |  number(?)  |  サブネットの範囲  |
-|  map_public_ip_on_launch  |  ●  |  bool  |  パブリックIPを設定するか  |
+|  コード  |  型  |  詳細  |
+|  ----  |  :--:  |  ----  |
+|  vpc_id  |  string  |  設置するVPCを場所  |
+|  availability_zone  |  string  |  設置するAZを指定  |
+|  cidr_block  |  number(?)  |  サブネットの範囲  |
+|  map_public_ip_on_launch  |  bool  |  パブリックIPを設定するか  |
 
 ````terraform
 resource "aws_subnet" "public_subnet_1a" {
@@ -308,9 +308,9 @@ resource "aws_route_table" "example" {
 
 ### 代表的なリファレンス
 
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  vpc_id  |  ●  |  string  |  設置するVPCを指定  |
+|  コード  |  型  |  詳細  |
+|  ----  |  :--:  |  ----  |
+|  vpc_id  |  string  |  設置するVPCを指定  |
 
 ````terraform
 resource "aws_route_table" "public_rt" {
@@ -343,9 +343,9 @@ resource "aws_main_route_table_association" "a" {
 
 ### 代表的なリファレンス
 
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  vpc_id  |  ●  |  string  |  設置するVPCを指定  |
+|  コード  |  型  |  詳細  |
+|  ----  |  :--:  |  ----  |
+|  vpc_id  |  string  |  設置するVPCを指定  |
 
 ````terraform
 resource "aws_route_table" "public_rt" {
@@ -366,7 +366,7 @@ resource "aws_route_table" "public_rt" {
 
 機能説明
 
-![名称未設定](https://user-images.githubusercontent.com/92671446/186575981-e7c1c6d8-1e74-471a-9622-d881a2c78734.png)
+![アーキテクチャ](https://user-images.githubusercontent.com/92671446/186575981-e7c1c6d8-1e74-471a-9622-d881a2c78734.png)
 
 ### 公式ページのコードサンプル
 
@@ -382,9 +382,9 @@ resource "aws_internet_gateway" "gw" {
 
 ### 代表的なリファレンス
 
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  vpc_id  |  ●  |  string  |  設置するVPC  |
+|  コード  |  型  |  詳細  |
+|  ----  |  :--:  |  ----  |
+|  vpc_id  |  string  |  設置するVPC  |
 
 ````terraform
 resource "aws_internet_gateway" "igw" {
@@ -420,11 +420,11 @@ resource "aws_route" "r" {
 
 ### 代表的なリファレンス
 
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  route_table_id  |  ●  |  string  |  ルーティングするテーブルのID  |
-|  destination_cidr_block  |  ●  |  string  |  宛先CIDRブロック  |
-|  gateway_id  |    |  string  |  VPCインターネットゲートウェイか仮想プライベートゲートウェイ  |
+|  コード  |  型  |  詳細  |
+|  ----  |  :--:  |  ----  |
+|  route_table_id  |  string  |  ルーティングするテーブルのID  |
+|  destination_cidr_block  |  string  |  宛先CIDRブロック  |
+|  gateway_id  |  string  |  VPCインターネットゲートウェイか仮想プライベートゲートウェイ  |
 
 ````terraform
 resource "aws_route" "public_rt_igw_r" {
@@ -475,9 +475,9 @@ resource "aws_security_group" "allow_tls" {
 
 ### 代表的なリファレンス
 
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  〇〇  |  ●  |  string  |  〇〇  |
+|  コード  |  型  |  詳細  |
+|  ----  |  :--:  |  ----  |
+|  〇〇  |  string  |  〇〇  |
 
 ````terraform
 resource "aws_security_group" "web_sg" {
@@ -500,15 +500,15 @@ resource "aws_security_group" "web_sg" {
 
 aws_security_group_rule
 
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  security_group_id  |●|  string  |  セキュリティグループID  |
-|  type  |●|  enum  |  ingress,egraee  |
-|  protocol  |●|  enum  |  tcp,udp,icmp  |
-|  from_port  |●|  number  |  開始ポート  |
-|  to_port  |●|  number  |  終了ポート  |
-|  cidr_blocks  |どちらか一方|  string  |  CIDRブロックを指定  |
-|  source_security_group_id  |どちらか一方|  string  |  セキュリティグループIDを指定 |
+|  コード  |  型  |  詳細  |
+|  ----  |  :--:  |  ----  |
+|  security_group_id  |  string  |  セキュリティグループID  |
+|  type  |  enum  |  ingress,egraee  |
+|  protocol  |  enum  |  tcp,udp,icmp  |
+|  from_port  |  number  |  開始ポート  |
+|  to_port  |  number  |  終了ポート  |
+|  cidr_blocks  |  string  |  CIDRブロックを指定  |
+|  source_security_group_id  |  string  |  セキュリティグループIDを指定 |
 
 ````terraform
 resource "aws_security_group_rule" "web_in_https" {
@@ -570,10 +570,10 @@ resource "aws_db_parameter_group" "default" {
 
 ### 代表的なリファレンス
 
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  name  |  ●  |  string  |  パラメータグループの名前  |
-|  family  |  ●  |  string  |  DB パラメータ グループのファミリ  |
+|  コード  |  型  |  詳細  |
+|  ----  |  :--:  |  ----  |
+|  name  |  string  |  パラメータグループの名前  |
+|  family  |  string  |  DB パラメータ グループのファミリ  |
 
 ````terraform
 resource "aws_db_parameter_group" "mysql_parametergroup" {
@@ -641,11 +641,11 @@ resource "aws_db_option_group" "example" {
 
 ### 代表的なリファレンス
 
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  name  |    |  string  |  RDSの名前  |
-|  engine_name  |  ●  |  string  |  オプション グループを関連付けるエンジンの名前を指定  |
-|  major_engine_version  |  ●  |  string  |  このオプション グループを関連付けるエンジンのメジャー バージョンを指定  |
+|  コード  |  型  |  詳細  |
+|  ----  |  :--:  |  ----  |
+|  name  |  string  |  RDSの名前  |
+|  engine_name  |  string  |  オプション グループを関連付けるエンジンの名前を指定  |
+|  major_engine_version  |  string  |  このオプション グループを関連付けるエンジンのメジャー バージョンを指定  |
 
 ````terraform
 resource "aws_db_option_group" "mysql_optiongroup" {
@@ -678,10 +678,10 @@ resource "aws_db_subnet_group" "default" {
 
 ### 代表的なリファレンス
 
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  name  |    |  string  |   サブネットグループの名前  |
-|  subnet_ids  |  ●  |  string  |  RDSを格納するsubnetの場所  |
+|  コード  |  型  |  詳細  |
+|  ----  |  :--:  |  ----  |
+|  name  |  string  |   サブネットグループの名前  |
+|  subnet_ids  |  string  |  RDSを格納するsubnetの場所  |
 
 ````terraform
 resource "aws_db_subnet_group" "mysql_subnetgroup" {
@@ -724,32 +724,32 @@ resource "aws_db_instance" "default" {
 
 ### 代表的なリファレンス
 
-|  コード  |  必須  |  型  |  詳細  |
-|  ----  |  :--: |  :--:  |  ----  |
-|  engine  |  ●  |  string  |  指定するデータベースエンジン  |
-|  engine_version  |    |  string  |  使用するエンジンのバージョン  |
-|  identifier  |  ●  |  string  |  RDSインスタンスの名前  |
-|  instance_class  |  ●  |  string  |  RDSのインスタンスタイプ  |
-|  username  |  ●  |  string  |  データベースのマスターユーザー  |
-|  password  |  ●  |  string  |  パスワード  |
-|  allocated_storage  |  ●  |  string  |  割り当てたストレージ  |
-|  max_allocated_storage  |  ●  |  string  |  RDSが自動的にスケーリングできる上限  |
-|  storage_type  |  ●  |  string  |  standard gp2 io1のいずれか  |
-|  storage_encrypted  |  ●  |  string  |  DBインスタンスが暗号化されているか  |
-|  multi_az  |  ●  |  string  |  RDSインスタンスがマルチAZかどうか指定  |
-|  availability_zone  |  ●  |  string  |  RDSインスタンスのAZ  |
-|  db_subnet_group_name  |  ●  |  string  |  DBサブネット名  |
-|  vpc_security_group_ids  |  ●  |  string  |  関連付けるDBセキュリティグループのリスト  |
-|  publicly_accessible  |  ●  |  string  |  インスタンスが公開されているか制御  |
-|  port  |  ●  |  string  |  DBが接続を受け入れるポート  |
-|  parameter_group_name  |  ●  |  string  |  関連づけるDBパラメータグループ  |
-|  option_group_name  |  ●  |  string  |  関連づけたオプショングループ  |
-|  backup_window  |    |  string  |  自動バックアップが有効になっている場合に作成される毎日の時間範囲  |
-|  backup_retention_period  |  ●  |  string  |  バックアップを保持する日数  |
-|  maintenance_window  |  ●  |  string  |  メンテナンスを実行するウィンドウ  |
-|  deletion_protection  |  ●  |  string  |  DBインスタンスで削除保護を有効にする必要がある場合に設定|
-|  skip_final_snapshot  |  ●  |  string  |  DBインスタンスを削除する前に、最終的なDBスナップショットを作成するか  |
-|  apply_immediately  |  ●  |  string  |  データベースの変更をすぐに適応するか指定  |
+|  コード  |  型  |  詳細  |
+|  ----  |  :--:  |  ----  |
+|  engine  |  string  |  指定するデータベースエンジン  |
+|  engine_version   |  string  |  使用するエンジンのバージョン  |
+|  identifier  |  string  |  RDSインスタンスの名前  |
+|  instance_class  |  string  |  RDSのインスタンスタイプ  |
+|  username  |  string  |  データベースのマスターユーザー  |
+|  password  |  string  |  パスワード  |
+|  allocated_storage  |  string  |  割り当てたストレージ  |
+|  max_allocated_storage  |  string  |  RDSが自動的にスケーリングできる上限  |
+|  storage_type  |  string  |  standard gp2 io1のいずれか  |
+|  storage_encrypted  |  string  |  DBインスタンスが暗号化されているか  |
+|  multi_az  |  string  |  RDSインスタンスがマルチAZかどうか指定  |
+|  availability_zone  |  string  |  RDSインスタンスのAZ  |
+|  db_subnet_group_name  |  string  |  DBサブネット名  |
+|  vpc_security_group_ids  |  string  |  関連付けるDBセキュリティグループのリスト  |
+|  publicly_accessible  |  string  |  インスタンスが公開されているか制御  |
+|  port  |  string  |  DBが接続を受け入れるポート  |
+|  parameter_group_name  |  string  |  関連づけるDBパラメータグループ  |
+|  option_group_name  |  string  |  関連づけたオプショングループ  |
+|  backup_window  |  string  |  自動バックアップが有効になっている場合に作成される毎日の時間範囲  |
+|  backup_retention_period  |  string  |  バックアップを保持する日数  |
+|  maintenance_window  |  string  |  メンテナンスを実行するウィンドウ  |
+|  deletion_protection  |  string  |  DBインスタンスで削除保護を有効にする必要がある場合に設定|
+|  skip_final_snapshot  |  string  |  DBインスタンスを削除する前に、最終的なDBスナップショットを作成するか  |
+|  apply_immediately  |  string  |  データベースの変更をすぐに適応するか指定  |
 
 ````terraform
 resource "aws_db_instance" "mysql" {
