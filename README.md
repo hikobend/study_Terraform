@@ -537,6 +537,8 @@ ingressのときとegressで挙動が違う
 
 ・オプショングループ
 
+・サブネットグループ
+
 ## パラメータグループの作成
 
 [公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_parameter_group)
@@ -649,6 +651,49 @@ resource "aws_db_option_group" "mysql_optiongroup" {
   name                 = "${var.env}-mysql-optiongroup"
   engine_name          = "mysql"
   major_engine_version = "8.0"
+}
+````
+
+### 実装時の注意点など
+
+## サブネットグループの作成
+
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_subnet_group)
+
+機能説明
+
+### 公式ページのコードサンプル
+
+````terraform
+resource "aws_db_subnet_group" "default" {
+  name       = "main"
+  subnet_ids = [aws_subnet.frontend.id, aws_subnet.backend.id]
+
+  tags = {
+    Name = "My DB subnet group"
+  }
+}
+````
+
+### 代表的なリファレンス
+
+|  コード  |  必須  |  型  |  詳細  |
+|  ----  |  :--: |  :--:  |  ----  |
+|  name  |    |  string  |   サブネットグループの名前  |
+|  subnet_ids  |  ●  |  string  |  RDSを格納するsubnetの場所  |
+
+````terraform
+resource "aws_db_subnet_group" "mysql_subnetgroup" {
+  name = "${var.env}-mysql-subnetgroup"
+  subnet_ids = [
+    aws_subnet.private_subnet_1a.id,
+    aws_subnet.private_subnet_1c.id
+  ]
+
+  tags = {
+    Name = "customer-db-${var.env}-mysql-subnetgroup"
+    Env  = var.env
+  }
 }
 ````
 
