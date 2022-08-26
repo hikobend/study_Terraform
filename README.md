@@ -539,7 +539,7 @@ ingressのときとegressで挙動が違う
 
 ## オプショングループの作成
 
-[公式ページ]　()
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_option_group)
 
 機能説明
 
@@ -548,7 +548,34 @@ ingressのときとegressで挙動が違う
 ### 公式ページのコードサンプル
 
 ````terraform
-コードをはる
+resource "aws_db_option_group" "example" {
+  name                     = "option-group-test-terraform"
+  option_group_description = "Terraform Option Group"
+  engine_name              = "sqlserver-ee"
+  major_engine_version     = "11.00"
+
+  option {
+    option_name = "Timezone"
+
+    option_settings {
+      name  = "TIME_ZONE"
+      value = "UTC"
+    }
+  }
+
+  option {
+    option_name = "SQLSERVER_BACKUP_RESTORE"
+
+    option_settings {
+      name  = "IAM_ROLE_ARN"
+      value = aws_iam_role.example.arn
+    }
+  }
+
+  option {
+    option_name = "TDE"
+  }
+}
 ````
 
 ### 代表的なリファレンス
