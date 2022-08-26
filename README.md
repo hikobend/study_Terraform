@@ -533,17 +533,17 @@ ingressのときとegressで挙動が違う
 ## RDSの作成
 
 ### 必要な設定
-・オプショングループ
-
 ・パラメータグループ
 
-## オプショングループの作成
+・オプショングループ
 
-[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_option_group)
+## パラメータグループの作成
+
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_parameter_group)
 
 機能説明
 
-セキュリティ強化や追加機能を有効にする設定です。TimeZoneを設定したり、OracleであればStatspackというパフォーマンス統計レポートを生成する機能
+データベースサービスのコンフィグ（パラメーター）を管理する設定です。ジョブ最大数や、I/O操作で読み込むブロックの最大数等の、チューニング関連
 
 ![アーキテクチャ](https://user-images.githubusercontent.com/92671446/186810476-c7ee1899-58a4-402e-bdc0-e751867a7167.png)
 
@@ -634,11 +634,10 @@ aws_db_option_group
 
 |  コード  |  必須  |  型  |  内容  |
 |  ----  |  :--:  |  ----  |  ----  |
-|  name  ||  string  |  オプショングループ名  |
-|  engine_name  |●|  string  |  関連づけるエンジン名(mysqlなど)  |
-|  major_engine_version  ||  string  |  関連づけるエンジンバージョン(5.7,8.0など)  |
-|  option  ||  block  |  具体的なオプション設定<br>option_name(必須) : オプション名 <br> option_settings : オプション設定  |
-|  tags  ||  object  |  タグ  |
+|  name  |    |  string  |  オプショングループ名  |
+|  engine_name  |  ●  |  string  |  関連づけるエンジン名(mysqlなど)  |
+|  major_engine_version  |    |  string  |  関連づけるエンジンバージョン(5.7,8.0など)  |
+|  tags  |    |  object  |  タグ  |
 
 ````terraform
 resource "aws_db_option_group" "name" {
