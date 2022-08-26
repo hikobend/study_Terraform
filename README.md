@@ -308,7 +308,7 @@ resource "aws_route_table" "example" {
 
 ### 代表的なリファレンス
 
-|  コード  |  型  |  詳細  |
+|  コード  |  詳細  |
 |  ----  |  ----  |
 |  vpc_id  |  設置するVPCを指定  |
 
@@ -343,7 +343,7 @@ resource "aws_main_route_table_association" "a" {
 
 ### 代表的なリファレンス
 
-|  コード  |  型  |  詳細  |
+|  コード  |  詳細  |
 |  ----  |  ----  |
 |  vpc_id  |  設置するVPCを指定  |
 
