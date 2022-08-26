@@ -545,7 +545,7 @@ ingressのときとegressで挙動が違う
 
 セキュリティ強化や追加機能を有効にする設定です。TimeZoneを設定したり、OracleであればStatspackというパフォーマンス統計レポートを生成する機能
 
-![アーキテクチャ]()
+![アーキテクチャ](https://user-images.githubusercontent.com/92671446/186810476-c7ee1899-58a4-402e-bdc0-e751867a7167.png)
 
 ### 公式ページのコードサンプル
 
