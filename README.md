@@ -570,7 +570,8 @@ resource "aws_db_parameter_group" "default" {
 
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
-|  〇〇  |  ●  |  string  |  〇〇  |
+|  name  |  ●  |  string  |  パラメータグループの名前  |
+|  family  |  ●  |  string  |  DB パラメータ グループのファミリ  |
 
 ````terraform
 resource "aws_db_parameter_group" "mysql_parametergroup" {
