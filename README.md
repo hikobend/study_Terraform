@@ -932,11 +932,11 @@ resource "aws_instance" "web" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  ami  |  〇〇  |
-|  instance_type  |  〇〇  |
-|  subnet_id  |  〇〇  |
-|  associate_public_ip_address  |  〇〇  |
-|  vpc_security_group_ids  |  〇〇  |
+|  ami  |  インスタンスに使用するAMI  |
+|  instance_type  |  インスタンスタイプに使用するインスタンスタイプ  |
+|  subnet_id  |  起動するサブネットid  |
+|  associate_public_ip_address  |  パブリックIPアドレスをVPC内のインスタンスに関連付けるか  |
+|  vpc_security_group_ids  |  関連付けるセキュリティグループのリスト  |
 
 ````terraform
 resource "aws_instance" "ec2_in_private_subnet_1a" {
