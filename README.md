@@ -882,7 +882,26 @@ data "aws_ami" "example" {
 |  〇〇  |  ●  |  string  |  〇〇  |
 
 ````terraform
-実際に作成したコード
+data "aws_ami" "ec2" {
+  most_recent = true
+  owners      = ["self", "amazon"]
+
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-kernel-5.10-hvm-2.0.*.0-x86_64-gp2"]
+  }
+
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}
+
 ````
 
 ### 実装時の注意点など
