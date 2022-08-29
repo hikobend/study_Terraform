@@ -1000,12 +1000,12 @@ resource "aws_lb" "test" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  name  |  〇〇  |
-|  load_balancer_type  |  〇〇  |
-|  internal  |  〇〇  |
-|  security_groups  |  〇〇  |
-|  subnets  |  〇〇  |
-|  enable_deletion_protection  |  〇〇  |
+|  name  |  LBの名前  |
+|  load_balancer_type  |  ロードバランサーのタイプ  |
+|  internal  |  trueの場合、LBは内部になる  |
+|  security_groups  |  LBに割り当てるセキュリティグループんのリスト  |
+|  subnets  |  LBにアタッチするサブネットのIDリスト  |
+|  enable_deletion_protection  |  削除保護  |
 
 ````terraform
 # Application Load Balancer
