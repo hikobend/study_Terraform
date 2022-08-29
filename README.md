@@ -911,14 +911,21 @@ data "aws_ami" "ec2" {
 
 ## EC2インスタンスの作成
 
-[公式ページ]　()
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)
 
 機能説明
 
 ### 公式ページのコードサンプル
 
 ````terraform
-コードをはる
+resource "aws_instance" "web" {
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
 ````
 
 ### 代表的なリファレンス
