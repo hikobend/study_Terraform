@@ -1000,7 +1000,12 @@ resource "aws_lb" "test" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  〇〇  |  〇〇  |
+|  name  |  〇〇  |
+|  load_balancer_type  |  〇〇  |
+|  internal  |  〇〇  |
+|  security_groups  |  〇〇  |
+|  subnets  |  〇〇  |
+|  enable_deletion_protection  |  〇〇  |
 
 ````terraform
 # Application Load Balancer
