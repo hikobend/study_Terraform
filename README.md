@@ -958,3 +958,36 @@ resource "aws_instance" "ec2_in_private_subnet_1a" {
 ````
 
 ### 実装時の注意点など
+
+## ALBの作成
+
+### 必要な設定
+・リスナー？
+
+・ターゲットグループ？
+
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb)
+
+機能説明
+
+![アーキテクチャ]()
+
+### 公式ページのコードサンプル
+
+````terraform
+コードをはる
+````
+
+### 代表的なリファレンス
+
+|  コード  |  詳細  |
+|  ----  |  ----  |
+|  〇〇  |  〇〇  |
+
+````terraform
+実際に作成したコード
+````
+
+### 実装時の注意点など
+
+・
