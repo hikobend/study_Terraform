@@ -849,7 +849,7 @@ resource "aws_instance" "web" {
 ### 呼び出すためのプログラム
 
 ````
-aws ec2 describe-images --image-ids ami-number
+aws ec2 describe-images --image-ids ami-xxxxxxs
 ````
 
 ### 公式ページのコードサンプル
