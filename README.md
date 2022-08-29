@@ -975,7 +975,25 @@ resource "aws_instance" "ec2_in_private_subnet_1a" {
 ### 公式ページのコードサンプル
 
 ````terraform
-コードをはる
+resource "aws_lb" "test" {
+  name               = "test-lb-tf"
+  internal           = false
+  load_balancer_type = "application"
+  security_groups    = [aws_security_group.lb_sg.id]
+  subnets            = [for subnet in aws_subnet.public : subnet.id]
+
+  enable_deletion_protection = true
+
+  access_logs {
+    bucket  = aws_s3_bucket.lb_logs.bucket
+    prefix  = "test-lb"
+    enabled = true
+  }
+
+  tags = {
+    Environment = "production"
+  }
+}
 ````
 
 ### 代表的なリファレンス
@@ -985,7 +1003,27 @@ resource "aws_instance" "ec2_in_private_subnet_1a" {
 |  〇〇  |  〇〇  |
 
 ````terraform
-実際に作成したコード
+# Application Load Balancer
+
+resource "aws_lb" "web" {
+  name               = "${var.env}-app-alb"
+  load_balancer_type = "application"
+  internal           = false
+  security_groups = [
+    aws_security_group.web_sg.id
+  ]
+  subnets = [
+    aws_subnet.private_subnet_1a.id,
+    aws_subnet.private_subnet_1c.id
+  ]
+
+  enable_deletion_protection = true
+
+  tags = {
+    Name = "customer-db-${var.env}-app-alb"
+    Env  = var.env
+  }
+}
 ````
 
 ### 実装時の注意点など
