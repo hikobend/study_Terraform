@@ -970,7 +970,7 @@ resource "aws_instance" "ec2_in_private_subnet_1a" {
 
 機能説明
 
-![アーキテクチャ]()
+![アーキテクチャ](https://user-images.githubusercontent.com/92671446/187147830-a6d3345c-d587-4f04-b854-219dfefb5f08.png)
 
 ### 公式ページのコードサンプル
 
