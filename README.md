@@ -880,6 +880,8 @@ data "aws_ami" "example" {
 |  コード  |  必須  |  型  |  詳細  |
 |  ----  |  :--: |  :--:  |  ----  |
 |  〇〇  |  ●  |  string  |  〇〇  |
+|  〇〇  |  ●  |  string  |  〇〇  |
+|  〇〇  |  ●  |  string  |  〇〇  |
 
 ````terraform
 data "aws_ami" "ec2" {
