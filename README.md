@@ -932,10 +932,29 @@ resource "aws_instance" "web" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  〇〇  |  〇〇  |
+|  ami  |  〇〇  |
+|  instance_type  |  〇〇  |
+|  subnet_id  |  〇〇  |
+|  associate_public_ip_address  |  〇〇  |
+|  vpc_security_group_ids  |  〇〇  |
 
 ````terraform
-実際に作成したコード
+resource "aws_instance" "ec2_in_private_subnet_1a" {
+  ami           = data.aws_ami.ec2.id
+  instance_type = "t2.micro"
+
+  subnet_id                   = aws_subnet.private_subnet_1a.id
+  associate_public_ip_address = false
+  vpc_security_group_ids = [
+    aws_security_group.app_sg.id
+  ]
+
+  tags = {
+    Name = "${var.env}-ec2-private_subnet_1a"
+    Env  = var.env
+    Type = "app"
+  }
+}
 ````
 
 ### 実装時の注意点など
