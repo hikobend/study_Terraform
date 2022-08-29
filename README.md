@@ -843,13 +843,10 @@ resource "aws_instance" "web" {
 
 サーバーを立てるために使用
 
-![アーキテクチャ](https://user-images.githubusercontent.com/92671446/186848388-28221914-392e-4514-a30e-33b5f1c1bf52.png)
-
-
 ### 呼び出すためのプログラム
 
 ````
-aws ec2 describe-images --image-ids ami-xxxxxxs
+aws ec2 describe-images --image-ids ami-xxxxxx
 ````
 
 ### 公式ページのコードサンプル
