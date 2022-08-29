@@ -879,9 +879,9 @@ data "aws_ami" "example" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  〇〇  |  〇〇  |
-|  〇〇  |  〇〇  |
-|  〇〇  |  〇〇  |
+|  most_recent  |  複数の結果が返された場合、最新のAMIを使用する。|
+|  owners  |  検索を制限するAMI所有者リスト。  |
+|  filter  |  フィルターで除外する1つ以上の名前/値のペア。  |
 
 ````terraform
 data "aws_ami" "ec2" {
