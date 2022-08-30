@@ -1102,3 +1102,31 @@ resource "aws_lb_target_group_attachment" "instance" {
 ### 実装時の注意点など
 
 ・
+
+
+## リスナーの作成
+
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group_attachment)
+
+### 公式ページのコードサンプル
+
+````terraform
+コードをはる
+````
+
+### 代表的なリファレンス
+
+|  コード  |  詳細  |
+|  ----  |  ----  |
+|  〇〇  |  〇〇  |
+
+````terraform
+resource "aws_lb_target_group_attachment" "instance" {
+  target_group_arn = aws_lb_target_group.alb_target_group.arn
+  target_id        = aws_instance.ec2_in_private_subnet_1a.id
+}
+````
+
+### 実装時の注意点など
+
+・
