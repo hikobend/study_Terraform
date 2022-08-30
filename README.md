@@ -1059,7 +1059,17 @@ resource "aws_lb_target_group" "test" {
 |  〇〇  |  〇〇  |
 
 ````terraform
-実際に作成したコード
+resource "aws_lb_target_group" "alb_target_group" {
+  name     = "${var.env}-app-alb-target-group"
+  port     = 3000
+  protocol = "HTTP"
+  vpc_id   = aws_vpc.vpc.id
+
+  tags = {
+    Name = "customer-db-${var.env}-app-alb-tg"
+    Env  = var.env
+  }
+}
 ````
 
 ### 実装時の注意点など
