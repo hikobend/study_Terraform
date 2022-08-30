@@ -962,9 +962,9 @@ resource "aws_instance" "ec2_in_private_subnet_1a" {
 ## ALBの作成
 
 ### 必要な設定
-・リスナー？
+・リスナー
 
-・ターゲットグループ？
+・ターゲットグループ
 
 [公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb)
 
