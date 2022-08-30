@@ -1074,20 +1074,11 @@ resource "aws_lb_target_group" "alb_target_group" {
 
 ### 実装時の注意点など
 
-・
+・ターゲットグループアタッチメントを追加設定する
 
-## 〇〇の作成
+## ターゲットグループアタッチメントの作成
 
-### 必要な設定
-・
-
-・
-
-[公式ページ]　()
-
-機能説明
-
-![アーキテクチャ]()
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group_attachment)
 
 ### 公式ページのコードサンプル
 
@@ -1102,7 +1093,10 @@ resource "aws_lb_target_group" "alb_target_group" {
 |  〇〇  |  〇〇  |
 
 ````terraform
-実際に作成したコード
+resource "aws_lb_target_group_attachment" "instance" {
+  target_group_arn = aws_lb_target_group.alb_target_group.arn
+  target_id        = aws_instance.ec2_in_private_subnet_1a.id
+}
 ````
 
 ### 実装時の注意点など
