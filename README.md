@@ -1034,3 +1034,67 @@ resource "aws_lb" "web" {
 ### 実装時の注意点など
 
 ・
+
+## ターゲットグループの作成
+
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group)
+
+機能説明
+
+### 公式ページのコードサンプル
+
+````terraform
+resource "aws_lb_target_group" "test" {
+  name     = "tf-example-lb-tg"
+  port     = 80
+  protocol = "HTTP"
+  vpc_id   = aws_vpc.main.id
+}
+````
+
+### 代表的なリファレンス
+
+|  コード  |  詳細  |
+|  ----  |  ----  |
+|  〇〇  |  〇〇  |
+
+````terraform
+実際に作成したコード
+````
+
+### 実装時の注意点など
+
+・
+
+## 〇〇の作成
+
+### 必要な設定
+・
+
+・
+
+[公式ページ]　()
+
+機能説明
+
+![アーキテクチャ]()
+
+### 公式ページのコードサンプル
+
+````terraform
+コードをはる
+````
+
+### 代表的なリファレンス
+
+|  コード  |  詳細  |
+|  ----  |  ----  |
+|  〇〇  |  〇〇  |
+
+````terraform
+実際に作成したコード
+````
+
+### 実装時の注意点など
+
+・
