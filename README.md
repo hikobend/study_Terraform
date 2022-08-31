@@ -1097,8 +1097,8 @@ resource "aws_lb_target_group_attachment" "test" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  target_group_arn  |  〇〇  |
-|  target_id  |  〇〇  |
+|  target_group_arn  |  ターゲットを登録するターゲットグループのARN  |
+|  target_id  |  ターゲットのID  |
 
 ````terraform
 resource "aws_lb_target_group_attachment" "instance" {
