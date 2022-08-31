@@ -1121,9 +1121,15 @@ resource "aws_lb_target_group_attachment" "instance" {
 |  〇〇  |  〇〇  |
 
 ````terraform
-resource "aws_lb_target_group_attachment" "instance" {
-  target_group_arn = aws_lb_target_group.alb_target_group.arn
-  target_id        = aws_instance.ec2_in_private_subnet_1a.id
+resource "aws_lb_listener" "alb_listener_http" {
+  load_balancer_arn = aws_lb.web.arn
+  port              = "80"
+  protocol          = "HTTP"
+
+  default_action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.alb_target_group.arn
+  }
 }
 ````
 
