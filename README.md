@@ -1056,10 +1056,10 @@ resource "aws_lb_target_group" "test" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  name  |  〇〇  |
-|  port  |  〇〇  |
-|  protocol  |  〇〇  |
-|  vpc_id  |  〇〇  |
+|  name  |  ターゲットグループの名前  |
+|  port  |  ターゲットがトラフィックを受信するポート  |
+|  protocol  |  トラフィックをターゲットにルーティングするために使用するプロトコル  |
+|  vpc_id  |  ターゲットグループを作成するVPCの識別子  |
 
 ````terraform
 resource "aws_lb_target_group" "alb_target_group" {
