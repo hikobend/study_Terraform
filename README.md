@@ -1056,7 +1056,10 @@ resource "aws_lb_target_group" "test" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  〇〇  |  〇〇  |
+|  name  |  〇〇  |
+|  port  |  〇〇  |
+|  protocol  |  〇〇  |
+|  vpc_id  |  〇〇  |
 
 ````terraform
 resource "aws_lb_target_group" "alb_target_group" {
@@ -1090,7 +1093,8 @@ resource "aws_lb_target_group" "alb_target_group" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  〇〇  |  〇〇  |
+|  target_group_arn  |  〇〇  |
+|  target_id  |  〇〇  |
 
 ````terraform
 resource "aws_lb_target_group_attachment" "instance" {
@@ -1118,7 +1122,11 @@ resource "aws_lb_target_group_attachment" "instance" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  〇〇  |  〇〇  |
+|  load_balancer_arn  |  〇〇  |
+|  port  |  〇〇  |
+|  protocol  |  〇〇  |
+|  type  |  〇〇  |
+|  target_group_arn  |  〇〇  |
 
 ````terraform
 resource "aws_lb_listener" "alb_listener_http" {
