@@ -1137,11 +1137,12 @@ resource "aws_lb_listener" "front_end" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  load_balancer_arn  |  〇〇  |
-|  port  |  〇〇  |
-|  protocol  |  〇〇  |
-|  type  |  〇〇  |
-|  target_group_arn  |  〇〇  |
+|  load_balancer_arn  |  ロードバランサーのARN  |
+|  port  |  ロードバランサーのポート  |
+|  protocol  |  クライアントからロードバランサーへの接続ポート  |
+|  default_action  |  デフォルトアクションの構成ブロック  |
+|  type  |  ルーティングのアクションタイプ  |
+|  target_group_arn  |  トラフィックをルーティングするターゲットグループのARN  |
 
 ````terraform
 resource "aws_lb_listener" "alb_listener_http" {
