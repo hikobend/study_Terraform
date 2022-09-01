@@ -1166,7 +1166,7 @@ resource "aws_lb_listener" "alb_listener_http" {
 ### 必要な設定
 ・EIP
 
-[公式ページ]　()
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/nat_gateway)
 
 機能説明
 
