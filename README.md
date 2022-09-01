@@ -1163,6 +1163,9 @@ resource "aws_lb_listener" "alb_listener_http" {
 
 ## NATゲートウェイの作成
 
+### 必要な設定
+・EIP
+
 [公式ページ]　()
 
 機能説明
@@ -1172,7 +1175,18 @@ resource "aws_lb_listener" "alb_listener_http" {
 ### 公式ページのコードサンプル
 
 ````terraform
-コードをはる
+resource "aws_nat_gateway" "example" {
+  allocation_id = aws_eip.example.id
+  subnet_id     = aws_subnet.example.id
+
+  tags = {
+    Name = "gw NAT"
+  }
+
+  # To ensure proper ordering, it is recommended to add an explicit dependency
+  # on the Internet Gateway for the VPC.
+  depends_on = [aws_internet_gateway.example]
+}
 ````
 
 ### 代表的なリファレンス
@@ -1182,7 +1196,23 @@ resource "aws_lb_listener" "alb_listener_http" {
 |  〇〇  |  〇〇  |
 
 ````terraform
-実際に作成したコード
+resource "aws_eip" "private_subnet_1a" {
+  vpc      = true
+}
+
+resource "aws_nat_gateway" "public_subnet_1a" {
+  allocation_id = aws_eip.private_subnet_1a.id
+  subnet_id     = aws_subnet.public_subnet_1a.id
+
+  tags = {
+    Name = "customer-db-${var.env}-nat-public_subnet_1a"
+    Env  = var.env
+  }
+
+  # To ensure proper ordering, it is recommended to add an explicit dependency
+  # on the Internet Gateway for the VPC.
+  depends_on = [aws_internet_gateway.igw]
+}
 ````
 
 ### 実装時の注意点など
