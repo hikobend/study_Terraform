@@ -1193,7 +1193,10 @@ resource "aws_nat_gateway" "example" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  〇〇  |  〇〇  |
+|  vpc  |  EIPがVPCにあるかどうかを設定  |
+|  allocation_id  |  ゲートウェイのEIPの割り当て  |
+|  subnet_id  |  ゲートウェイを配置するサブネットのサブネットID  |
+|  depends_on  |  接続するインターネットゲートウェイ  |
 
 ````terraform
 resource "aws_eip" "private_subnet_1a" {
@@ -1217,4 +1220,4 @@ resource "aws_nat_gateway" "public_subnet_1a" {
 
 ### 実装時の注意点など
 
-・
+・EIPを設定する時、 EC2instanceを指定すると失敗した。原因を調べる必要がある
