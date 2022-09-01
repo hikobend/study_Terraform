@@ -1167,7 +1167,7 @@ resource "aws_lb_listener" "alb_listener_http" {
 
 機能説明
 
-![アーキテクチャ]()
+![アーキテクチャ](https://user-images.githubusercontent.com/92671446/187842807-9c1d9682-f86b-4d4c-8498-938df8bc2b53.png)
 
 ### 公式ページのコードサンプル
 
