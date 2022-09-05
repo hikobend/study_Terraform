@@ -1223,3 +1223,4 @@ resource "aws_nat_gateway" "public_subnet_1a" {
 
 ・EIPを設定する時、 EC2instanceを指定すると失敗した。原因を調べる必要がある
 
+# CloudWatch
