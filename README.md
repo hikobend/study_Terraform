@@ -1234,16 +1234,11 @@ resource "aws_nat_gateway" "public_subnet_1a" {
 
 ## aws_cloudwatch_metric_alarmの作成
 
-### 必要な設定
-・
-
-・
-
-[公式ページ]　()
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)
 
 機能説明
 
-![アーキテクチャ]()
+
 
 ### 公式ページのコードサンプル
 
