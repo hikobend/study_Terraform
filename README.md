@@ -1231,3 +1231,36 @@ resource "aws_nat_gateway" "public_subnet_1a" {
 |  aws_cloudwatch_dashboard  |  ダッシュボードリソース  |
 |  aws_cloudwatch_metric_alarm  |  メトリクスアラームリソース  |
 |  aws_cloudwatch_metric_stream  |  メトリクスストリームリソース  |
+
+## aws_cloudwatch_metric_alarmの作成
+
+### 必要な設定
+・
+
+・
+
+[公式ページ]　()
+
+機能説明
+
+![アーキテクチャ]()
+
+### 公式ページのコードサンプル
+
+````terraform
+コードをはる
+````
+
+### 代表的なリファレンス
+
+|  コード  |  詳細  |
+|  ----  |  ----  |
+|  〇〇  |  〇〇  |
+
+````terraform
+実際に作成したコード
+````
+
+### 実装時の注意点など
+
+・
