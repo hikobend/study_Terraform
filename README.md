@@ -1227,7 +1227,7 @@ resource "aws_nat_gateway" "public_subnet_1a" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  cloudwatch_composite_alarm  |    |
-|    |    |
-|    |    |
-|    |    |
+|  aws_cloudwatch_composite_alarm  |    |
+|  aws_cloudwatch_dashboard  |    |
+|  aws_cloudwatch_metric_alarm  |    |
+|  aws_cloudwatch_metric_stream  |    |
