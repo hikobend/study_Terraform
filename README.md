@@ -1238,7 +1238,8 @@ resource "aws_nat_gateway" "public_subnet_1a" {
 
 機能説明
 
-
+- ステータスチェック
+- CPUが80%以上であればアラート
 
 ### 公式ページのコードサンプル
 
