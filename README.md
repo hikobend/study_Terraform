@@ -1348,4 +1348,6 @@ resource "aws_cloudwatch_metric_alarm" "foobar" {
 
 ### 実装時の注意点など
 
-・
+・ 監視ができているか確認
+
+
