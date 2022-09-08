@@ -1262,10 +1262,88 @@ resource "aws_cloudwatch_metric_alarm" "foobar" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  〇〇  |  〇〇  |
+|  alarm_name  |  〇〇  |
+|  comparison_operator  |  〇〇  |
+|  evaluation_periods  |  〇〇  |
+|  metric_name  |  〇〇  |
+|  namespace  |  〇〇  |
+|  period  |  〇〇  |
+|  statistic  |  〇〇  |
+|  threshold  |  〇〇  |
+|  alarm_description  |  〇〇  |
+|  insufficient_data_actions  |  〇〇  |
+|  dimensions  |  〇〇  |
+|  metric_query  |  〇〇  |
+|  expression  |  〇〇  |
+|  return_data  |  〇〇  |
+|  stat  |  〇〇  |
+|  unit  |  〇〇  |
 
 ````terraform
-実際に作成したコード
+resource "aws_cloudwatch_metric_alarm" "ec2_in_private_subnet_1a" {
+  alarm_name                = "EC2_private_subnet_1a"
+  comparison_operator       = "GreaterThanOrEqualToThreshold"
+  evaluation_periods        = "2"
+  metric_name               = "CPUUtilization"
+  namespace                 = "AWS/EC2"
+  period                    = "120"
+  statistic                 = "Average"
+  threshold                 = "80"
+  alarm_description         = "This metric monitors ec2 cpu utilization"
+  insufficient_data_actions = []
+    dimensions = {
+    InstanceId = "aws_instance.ec2_in_private_subnet_1a.id"
+  }
+}
+
+resource "aws_cloudwatch_metric_alarm" "foobar" {
+  alarm_name                = "ALB"
+  comparison_operator       = "GreaterThanOrEqualToThreshold"
+  evaluation_periods        = "2"
+  threshold                 = "10"
+  alarm_description         = "Request error rate has exceeded 10%"
+  insufficient_data_actions = []
+
+  metric_query {
+    id          = "e1"
+    expression  = "m2/m1*100"
+    label       = "Error Rate"
+    return_data = "true"
+  }
+
+  metric_query {
+    id = "m1"
+
+    metric {
+      metric_name = "RequestCount"
+      namespace   = "AWS/ApplicationELB"
+      period      = "120"
+      stat        = "Sum"
+      unit        = "Count"
+
+      dimensions = {
+        LoadBalancer = "aws_lb/web"
+      }
+    }
+  }
+
+  metric_query {
+    id = "m2"
+
+    metric {
+      metric_name = "HTTPCode_ELB_5XX_Count"
+      namespace   = "AWS/ApplicationELB"
+      period      = "120"
+      stat        = "Sum"
+      unit        = "Count"
+
+      dimensions = {
+        LoadBalancer = "aws_lb/web"
+      }
+    }
+  }
+}
+
 ````
 
 ### 実装時の注意点など
