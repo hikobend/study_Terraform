@@ -1352,28 +1352,41 @@ resource "aws_cloudwatch_metric_alarm" "foobar" {
 
 ## Route53の作成
 
+## zoneの設定
+
 ### 必要な設定
-・
+・zone
 
-・
+・record
 
-[公式ページ]　()
+[公式ページ](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_zone)
 
 機能説明
+
+ドメイン登録
 
 ![アーキテクチャ](https://user-images.githubusercontent.com/92671446/189029696-3f8f2f4b-8eb5-431d-a32c-6e2cdb97e594.png)
 
 ### 公式ページのコードサンプル
 
 ````terraform
-コードをはる
+resource "aws_route53_zone" "dev" {
+  name = "dev.example.com"
+
+  tags = {
+    Environment = "dev"
+  }
+}
 ````
 
 ### 代表的なリファレンス
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  〇〇  |  〇〇  |
+|  name  |  ホストされたゾーンの名前  |
+|  comment  |  ホストされたゾーン名  |
+|  delegation_set_id  |  NSレコードをホストゾーンに割り当てる再利用可能な委任のセット  |
+|  force_destroy  |  zoneを削除したとき、全データを削除  |
 
 ````terraform
 実際に作成したコード
