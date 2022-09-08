@@ -1361,7 +1361,7 @@ resource "aws_cloudwatch_metric_alarm" "foobar" {
 
 機能説明
 
-![アーキテクチャ]()
+![アーキテクチャ](https://user-images.githubusercontent.com/92671446/189029696-3f8f2f4b-8eb5-431d-a32c-6e2cdb97e594.png)
 
 ### 公式ページのコードサンプル
 
