@@ -1389,10 +1389,18 @@ resource "aws_route53_zone" "dev" {
 |  force_destroy  |  zoneを削除したとき、全データを削除  |
 
 ````terraform
-実際に作成したコード
+resource "aws_route53_zone" "dev" {
+  name          = var.domain
+  force_destroy = false
+
+  tags = {
+    Name = "customer-db-${var.env}-route53"
+    Env  = var.env
+  }
+}
 ````
 
 ### 実装時の注意点など
 
-・
+・force_destroyはやばい
 
