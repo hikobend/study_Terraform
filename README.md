@@ -1262,8 +1262,8 @@ resource "aws_cloudwatch_metric_alarm" "foobar" {
 
 |  コード  |  詳細  |
 |  ----  |  ----  |
-|  alarm_name  |  〇〇  |
-|  comparison_operator  |  〇〇  |
+|  alarm_name  |  アラーム名  |
+|  comparison_operator  |  指定された統計としきい値を比較する時に使用する計算  |
 |  evaluation_periods  |  〇〇  |
 |  metric_name  |  〇〇  |
 |  namespace  |  〇〇  |
