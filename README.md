@@ -1264,20 +1264,20 @@ resource "aws_cloudwatch_metric_alarm" "foobar" {
 |  ----  |  ----  |
 |  alarm_name  |  アラーム名  |
 |  comparison_operator  |  指定された統計としきい値を比較する時に使用する計算  |
-|  evaluation_periods  |  〇〇  |
-|  metric_name  |  〇〇  |
-|  namespace  |  〇〇  |
-|  period  |  〇〇  |
-|  statistic  |  〇〇  |
-|  threshold  |  〇〇  |
-|  alarm_description  |  〇〇  |
-|  insufficient_data_actions  |  〇〇  |
-|  dimensions  |  〇〇  |
-|  metric_query  |  〇〇  |
-|  expression  |  〇〇  |
-|  return_data  |  〇〇  |
-|  stat  |  〇〇  |
-|  unit  |  〇〇  |
+|  evaluation_periods  |  データが指定されたしきい値と比較される期間の数  |
+|  metric_name  |  アラームに関連づけられたメトリックの名前  |
+|  namespace  |  アラームに関連づけられたメトリックの名前  |
+|  period  |  指定が適用される期間  |
+|  statistic  |  アラームの関連メトリックに適用する統計  |
+|  threshold  |  指定された統計がメトリックに適用する統計  |
+|  alarm_description  |  アラームの説明  |
+|  insufficient_data_actions  |  このアラームが他の状態からinsufficient_dataに移行した時に実行するアクションリスト  |
+|  dimensions  |  アラームに関連づけられたメトリックのディメンション  |
+|  metric_query  |  メトリックの数式に基づいてアラームを作成  |
+|  expression  |  返されたデータに対して実行される数式  |
+|  return_data  |  結果をアラームとして指定  |
+|  stat  |  このメトリックに適用する統計  |
+|  unit  |  このメトリックの単位  |
 
 ````terraform
 resource "aws_cloudwatch_metric_alarm" "ec2_in_private_subnet_1a" {
